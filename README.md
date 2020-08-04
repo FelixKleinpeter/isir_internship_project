@@ -20,8 +20,10 @@ project
 └───utils
 │   │   input_reader.py
 │   │   file_reader.py
+│   │
 │   └───network
 │   |   │   file_sender.py
+│   │
 │   └───generator
 │   |   │   question.py
 │   |   │   xml_file.py
