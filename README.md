@@ -17,18 +17,16 @@ project
 │       │   movie.csv
 │       │   ...
 │   
-└───generator
-│   │   question.py
-│   │   xml_file.py
-│   
-└───input
-│   │   text.py
-│   │   button.py
-│   │   speech.py
+└───utils
+│   │   input_reader.py
+│   │   file_reader.py
+│   └───network
+│   |   │   file_sender.py
+│   └───generator
+│   |   │   question.py
+│   |   │   xml_file.py
 │   
 └───decision
 │   │   behaviour.py
 │   
-└───network
-│   │   file_sender.py
 ```

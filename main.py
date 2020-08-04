@@ -1,4 +1,6 @@
-
+from utils.input_reader import text_input
 
 if __name__ == "__main__":
-    print("Hello world")
+
+    question = "How are you?"
+    answer = text_input(question)
