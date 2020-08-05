@@ -36,6 +36,5 @@ project
 
 TODO List :
 - Network issue
-- Create fml file generator
 - Comment code
 - Tag cleaning

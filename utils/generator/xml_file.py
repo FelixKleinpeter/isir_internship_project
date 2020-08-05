@@ -10,12 +10,14 @@ def xml_from_question(question, filename):
     				<reference>tmp/from-fml-apml.pho</reference>
     			</description>
                 """
-    for ids in [(0,1),(2,2),(3,3),(4,4)]:
+    for i, ids in enumerate([(0,1),(2,2),(3,3),(4,6)]):
         output_string += "\n\t"
-        output_string += """<tm id="tm""" + str(ids+1) + """"/>"""
-        output_string += "\n\t\t" + words[ids[0]:ids[1]]
+        output_string += """<tm id="tm""" + str(i+1) + """"/>"""
+        output_string += "\n\t\t"
+        for w in words[ids[0]:ids[1]+1]:
+            output_string += w + " "
     output_string += "\n\t"
-    output_string += """<tm id="tm""" + str(ids+2) + """"/>"""
+    output_string += """<tm id="tm""" + str(i+2) + """"/>"""
 
     output_string += """
     			<pitchaccent id="pa2" type="HStar" level="medium" start="s1:tm3" end="s1:tm4" importance="1"/>

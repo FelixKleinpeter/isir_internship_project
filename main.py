@@ -25,8 +25,6 @@ from recommendation.functions import get_X, get_y, data_without_v
 
 if __name__ == "__main__":
 
-    #answer = text_input(question)
-
     #Loading or computing the process dataframe
     LOAD = True
     df, tags, artists = experiment_lastfm("recommendation/data",load=LOAD)
@@ -53,9 +51,9 @@ if __name__ == "__main__":
             v, _ = random_forest(X, y, randomness = randomness)
         avg = np.mean(X[v])
         question = question_function(v, tags)
-        y_or_n = input_function(question)
         filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
         xml_from_question(question, filename)
+        y_or_n = input_function(question)
 
 
         if y_or_n == "y" or y_or_n == "Y" or y_or_n == "yes" or y_or_n == "Yes" :
