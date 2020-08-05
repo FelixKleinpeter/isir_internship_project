@@ -10,7 +10,8 @@ project
 │
 └───recommendation
 │   │   recommender.py
-│   │   file012.py
+│   │   cleaning.py
+│   │   functions.py
 │   │
 │   └───database
 │       │   music.csv
@@ -32,3 +33,9 @@ project
 │   │   behaviour.py
 │   
 ```
+
+TODO List :
+- Network issue
+- Create fml file generator
+- Comment code
+- Tag cleaning

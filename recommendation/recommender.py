@@ -24,4 +24,4 @@ def random_forest(X, y, display=False, max_depth=7, randomness = 0):
     clf.fit(X, y)
     fe = clf.feature_importances_
     v = choose_randomly(X, fe, randomness)
-    return v
+    return v, fe

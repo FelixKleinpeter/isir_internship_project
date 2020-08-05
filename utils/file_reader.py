@@ -1,5 +1,6 @@
 #coding:utf-8
 
+import pickle
 import pandas as pd
 
 # LASTFM
@@ -24,3 +25,22 @@ def read_lastfm(directory):
     user_taggedartists = pd.read_csv(d + "user_taggedartists.dat", sep="\t", usecols=['userID', 'artistID', 'tagID', 'day', 'month', 'year'])
 
     return artists, tags, user_artists, user_friends, user_taggedartists
+
+def experiment_lastfm(directory, load=False, filename='experiment_df_lastfm.pkl'):
+    d = directory
+    if d[-1] != "/":
+        d += "/"
+
+    artists, tags, user_artists, user_friends, user_taggedartists = read_lastfm(d+"lastfm")
+    if not load:
+        df = create_experiment_df(user_artists, tags, user_taggedartists, 500)
+
+        f = d+filename
+        outfile = open(f,'wb')
+        pickle.dump(df,outfile,protocol=4)
+        outfile.close()
+    else:
+        f = open(d+filename,'rb')
+        df = pickle.load(f)
+        f.close()
+    return df, tags, artists
