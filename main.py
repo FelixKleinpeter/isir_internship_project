@@ -10,6 +10,7 @@ from utils.generator.question import question_from_v_musics
 from utils.generator.xml_file import xml_from_question
 from utils.output_displayer import lastfm_output_displayer
 from utils.network.file_sender import send_to_greta
+from utils.functions import clean_directory
 
 from precomputation.lastfm import first_variable_precomputation
 
@@ -30,8 +31,6 @@ if __name__ == "__main__":
     #Loading or computing the process dataframe
     LOAD = True
     df, tags, artists = experiment_lastfm("recommendation/data",load=LOAD)
-
-
 
     # Parameters
     randomness = 0.7
@@ -56,7 +55,7 @@ if __name__ == "__main__":
         filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
         xml_from_question(question, filename)
         send_to_greta("output/" + filename)
-        
+
         y_or_n = input_function(question)
 
         if y_or_n == "y" or y_or_n == "Y" or y_or_n == "yes" or y_or_n == "Yes" :
@@ -75,13 +74,4 @@ if __name__ == "__main__":
     print(prefered_artists)
     print("Question amount %s " % question_amount)
 
-    folder = 'output'
-    for filename in os.listdir(folder):
-        file_path = os.path.join(folder, filename)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
+    clean_directory('output')

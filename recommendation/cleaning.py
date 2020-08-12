@@ -12,6 +12,22 @@ def remove_useless_tags(tags, user_taggedartists, threshold):
     selected_tags = tags[[(i in selected) for i in tags.tagID]]
     selected_user_taggedartists = user_taggedartists[[(i in selected) for i in user_taggedartists.tagID]]
 
+    meaningless_tags = ["chillout", "ambient", "downtempo", "seen live", "beautiful", "amazing", "sexy", "awesome", "cover", "mellow"]
+    meaningless_tagIDs = []
+    for t in meaningless_tags:
+        meaningless_tagIDs.append(selected_tags[selected_tags.tagValue == t].index[0])
+    selected_tags.drop(meaningless_tagIDs)
+    selected.remove(meaningless_tagIDs)
+
+    names_to_replace = {"idm": "intelligent dance", "ebm":"electronic body", "00s": "2000s"}
+    ids, values = selected_tags.tagID.values, selected_tags.tagValue.values
+    for i, v in enumerate(values):
+        if v in names_to_replace.keys():
+            values[i] = names_to_replace[v]
+    selected_tags = pd.DataFrame({'tagID': ids, 'tagValue': values})
+
+    ###Remove tags from user_taggedartists
+
     return selected_tags, selected_user_taggedartists
 
 def create_experiment_df(user_artists, tags, user_taggedartists, threshold):
