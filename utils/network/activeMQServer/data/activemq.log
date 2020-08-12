@@ -1,0 +1,565 @@
+2020-08-03 15:07:16,376 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 15:07:16 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-03 15:07:17,313 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:07:17,988 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-03 15:07:18,161 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52324-1596460038004-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:07:18,186 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:07:18,188 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:07:18,194 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:07:18,197 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:07:18,202 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:07:18,206 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:07:18,211 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:07:18,214 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:07:18,225 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 15:07:18,344 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 15:07:18,652 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@6b88ca8c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-03 15:07:18,753 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-03 15:07:18,758 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:07:18,767 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52324-1596460038004-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:07:18,770 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:07:19,649 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 15:07:19,650 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 15:09:50,465 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52342 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52342@61616
+2020-08-03 15:16:03,374 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52358 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52358@61616
+2020-08-03 15:18:49,552 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52390 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52390@61616
+2020-08-03 15:19:58,775 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52410 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52410@61616
+2020-08-03 15:20:23,605 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52411 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52411@61616
+2020-08-03 15:22:49,904 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52415 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52415@61616
+2020-08-03 15:25:21,543 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52486 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52486@61616
+2020-08-03 15:25:29,188 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52487 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52487@61616
+2020-08-03 15:27:35,750 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp790094605-42
+2020-08-03 15:28:11,742 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52532 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52532@61616
+2020-08-03 15:29:03,769 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52541 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52541@61616
+2020-08-03 15:44:17,944 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52730 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52730@61616
+2020-08-03 15:44:39,501 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52731 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52731@61616
+2020-08-03 15:49:01,054 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52762 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52762@61616
+2020-08-03 15:49:12,125 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52763 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52763@61616
+2020-08-03 15:51:11,630 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52324-1596460038004-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-23
+2020-08-03 15:51:11,642 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 15:51:11,645 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 15:51:11,648 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 15:51:11,651 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 15:51:11,665 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 15:51:11,670 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 15:51:11,673 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-23
+2020-08-03 15:51:11,674 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2020-08-03 15:51:11,676 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2020-08-03 15:51:11,677 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2020-08-03 15:51:11,791 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52324-1596460038004-0:1) uptime 43 minutes | org.apache.activemq.broker.BrokerService | Thread-23
+2020-08-03 15:51:11,793 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52324-1596460038004-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-23
+2020-08-03 15:51:11,795 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 15:07:16 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-23
+2020-08-03 15:51:16,955 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 15:51:16 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-03 15:51:17,919 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:51:18,050 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-03 15:51:18,147 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-03 15:51:18,316 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52773-1596462678163-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:51:18,386 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:51:18,388 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:51:18,394 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:51:18,398 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:51:18,406 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:51:18,408 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:51:18,414 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:51:18,417 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:51:18,426 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 15:51:18,502 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 15:51:18,633 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@41d426b5{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-03 15:51:18,700 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-03 15:51:18,706 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:51:18,711 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52773-1596462678163-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:51:18,727 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:51:19,608 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 15:51:19,609 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 15:51:26,289 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52782 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52782@61616
+2020-08-03 15:51:53,603 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52773-1596462678163-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,620 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,624 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,628 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,632 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,643 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,648 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,649 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,650 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,652 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,768 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52773-1596462678163-0:1) uptime 35.867 seconds | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,771 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52773-1596462678163-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-03 15:51:53,776 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 15:51:16 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2020-08-03 15:51:59,229 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 15:51:59 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-03 15:52:00,186 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:52:00,320 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-03 15:52:00,417 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-03 15:52:00,573 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52790-1596462720431-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:52:00,647 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:52:00,649 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:52:00,655 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:52:00,658 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:52:00,663 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:52:00,666 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:52:00,671 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 15:52:00,673 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:52:00,680 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 15:52:00,757 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 15:52:00,900 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@41d426b5{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-03 15:52:00,964 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-03 15:52:00,969 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 15:52:00,971 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52790-1596462720431-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:52:00,972 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-03 15:52:01,857 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 15:52:01,858 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 15:52:51,532 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:52806 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:52806@61616
+2020-08-03 16:13:38,043 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp452364286-117
+2020-08-03 16:17:32,549 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52790-1596462720431-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-23
+2020-08-03 16:17:32,553 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-03 16:17:32,560 | INFO  | Could not accept connection during shutdown  : null (null) | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-03 16:17:32,567 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 16:17:32,573 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 16:17:32,573 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-03 16:17:32,577 | INFO  | Could not accept connection during shutdown  : null (null) | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-03 16:17:32,576 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 16:17:32,584 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 16:17:32,591 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 16:17:32,596 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2020-08-03 16:17:32,601 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-23
+2020-08-03 16:17:32,602 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2020-08-03 16:17:32,603 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2020-08-03 16:17:32,604 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2020-08-03 16:17:32,766 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52790-1596462720431-0:1) uptime 25 minutes | org.apache.activemq.broker.BrokerService | Thread-23
+2020-08-03 16:17:32,768 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-52790-1596462720431-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-23
+2020-08-03 16:17:32,773 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 15:51:59 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-23
+2020-08-03 16:17:43,443 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 16:17:43 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-03 16:17:44,382 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:17:44,485 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-03 16:17:44,566 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-03 16:17:44,738 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53123-1596464264581-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:17:44,859 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:17:44,861 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:17:44,868 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:17:44,870 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:17:44,876 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:17:44,879 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:17:44,886 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:17:44,888 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:17:44,896 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 16:17:44,976 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 16:17:45,149 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@6bbe2511{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-03 16:17:45,228 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-03 16:17:45,242 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:17:45,247 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53123-1596464264581-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:17:45,251 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:17:46,181 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 16:17:46,182 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 16:18:25,808 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1985938863-54
+2020-08-03 16:19:22,204 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53123-1596464264581-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,211 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,212 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,214 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,217 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,230 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,235 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,239 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,240 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,241 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,241 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,495 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53123-1596464264581-0:1) uptime 1 minute | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,496 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53123-1596464264581-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-03 16:19:22,500 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 16:17:43 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2020-08-03 16:19:39,897 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 16:19:39 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-03 16:19:40,806 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:19:40,937 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-03 16:19:41,053 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-03 16:19:41,207 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53166-1596464381069-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:19:41,354 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:19:41,354 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:19:41,354 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:19:41,354 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:19:41,370 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:19:41,370 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:19:41,385 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-03 16:19:41,385 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:19:41,385 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 16:19:41,470 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-03 16:19:41,608 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@6bbe2511{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-03 16:19:41,671 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-03 16:19:41,686 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-03 16:19:41,686 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53166-1596464381069-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:19:41,686 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-03 16:19:42,634 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 16:19:42,636 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-03 16:20:11,424 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.server.HttpChannel | qtp1985938863-44
+javax.servlet.ServletException: javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:162)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:162)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:567)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	... 17 more
+Caused by: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsyncServlet.service(ServletHolder.java:1411)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1631)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:226)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:102)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1610)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:549)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:567)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1363)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:489)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1278)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	... 19 more
+Caused by: java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:352)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:940)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 50 more
+2020-08-03 16:20:36,266 | WARN  | /admin/deleteDestination.action | org.eclipse.jetty.server.HttpChannel | qtp1985938863-53
+javax.servlet.ServletException: javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:162)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:162)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:567)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	... 17 more
+Caused by: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsyncServlet.service(ServletHolder.java:1411)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1631)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:226)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:102)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1610)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:549)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:567)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1363)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:489)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1278)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	... 19 more
+Caused by: java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:352)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:940)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 50 more
+2020-08-03 16:22:07,792 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:53210 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:53210@61616
+2020-08-03 16:22:33,699 | WARN  | Transport Connection to: tcp://0:0:0:0:0:0:0:1:53212 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///0:0:0:0:0:0:0:1:53212@61616
+2020-08-03 16:43:53,088 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53166-1596464381069-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-03 16:43:53,088 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-03 16:43:53,103 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-03 16:43:53,103 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-03 16:43:53,103 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-03 16:43:53,119 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-03 16:43:53,119 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-28
+2020-08-03 16:43:53,135 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-03 16:43:53,135 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-03 16:43:53,135 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-03 16:43:53,260 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53166-1596464381069-0:1) uptime 24 minutes | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-03 16:43:53,260 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-53166-1596464381069-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-03 16:43:53,260 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Mon Aug 03 16:19:39 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-28
+2020-08-04 10:15:57,613 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Tue Aug 04 10:15:57 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-04 10:15:59,005 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-04 10:15:59,305 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-04 10:15:59,459 | INFO  | Recovering from the journal @1:3003 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-04 10:15:59,475 | INFO  | Recovery replayed 5 operations from the journal in 0.116 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-04 10:15:59,490 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-04 10:15:59,722 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51371-1596528959506-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-04 10:15:59,939 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-04 10:15:59,939 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-04 10:15:59,961 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-04 10:15:59,961 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-04 10:15:59,976 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-04 10:15:59,976 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-04 10:15:59,976 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-04 10:15:59,976 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-04 10:16:00,008 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-04 10:16:00,208 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-04 10:16:00,546 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@635572a7{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-04 10:16:00,687 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-04 10:16:00,687 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-04 10:16:00,687 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51371-1596528959506-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-04 10:16:00,687 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-04 10:16:02,037 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-04 10:16:02,037 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-04 11:39:02,931 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1178290888-116
+2020-08-04 12:17:01,882 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Session-HouseKeeper-5b800468-1
+2020-08-04 12:41:54,343 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1178290888-60
+2020-08-04 13:26:25,339 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51371-1596528959506-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,339 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,354 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,354 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,354 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,370 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,370 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,385 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,385 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,385 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,385 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,517 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51371-1596528959506-0:1) uptime 3 hours 10 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,517 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51371-1596528959506-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-04 13:26:25,517 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Tue Aug 04 10:15:57 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2020-08-05 12:58:24,171 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Wed Aug 05 12:58:24 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-05 12:58:25,534 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-05 12:58:25,787 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-05 12:58:25,885 | INFO  | Recovering from the journal @1:3844 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-05 12:58:25,895 | INFO  | Recovery replayed 3 operations from the journal in 0.08 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-05 12:58:25,913 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-05 12:58:26,093 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51283-1596625105928-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-05 12:58:26,220 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 12:58:26,222 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 12:58:26,239 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 12:58:26,241 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 12:58:26,247 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 12:58:26,249 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 12:58:26,254 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 12:58:26,257 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 12:58:26,285 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-05 12:58:26,453 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-05 12:58:26,620 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@635572a7{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-05 12:58:26,719 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-05 12:58:26,721 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 12:58:26,723 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51283-1596625105928-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-05 12:58:26,724 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-05 12:58:28,117 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-05 12:58:28,118 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-05 13:01:56,422 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1178290888-45
+2020-08-05 13:58:27,896 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Session-HouseKeeper-5b800468-1
+2020-08-05 14:08:01,742 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51283-1596625105928-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,742 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,742 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-05 14:08:01,742 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,742 | INFO  | Could not accept connection during shutdown  : null (null) | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-05 14:08:01,742 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,742 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,757 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,757 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,757 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,757 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,757 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,858 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51283-1596625105928-0:1) uptime 1 hour 9 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,858 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51283-1596625105928-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-08-05 14:08:01,858 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Wed Aug 05 12:58:24 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2020-08-05 14:08:11,638 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Wed Aug 05 14:08:11 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-05 14:08:12,539 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-05 14:08:12,640 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-05 14:08:12,756 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-05 14:08:12,903 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51811-1596629292771-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-05 14:08:13,003 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 14:08:13,003 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 14:08:13,019 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 14:08:13,019 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 14:08:13,019 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 14:08:13,019 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 14:08:13,034 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-05 14:08:13,034 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 14:08:13,041 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-05 14:08:13,119 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-05 14:08:13,257 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@497486b3{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-05 14:08:13,304 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-05 14:08:13,320 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-05 14:08:13,320 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51811-1596629292771-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-05 14:08:13,320 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-05 14:08:14,142 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-05 14:08:14,142 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-05 14:08:40,124 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2081000371-46
+2020-08-05 14:41:13,929 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51811-1596629292771-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-05 14:41:13,929 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-05 14:41:13,929 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-05 14:41:13,944 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-05 14:41:13,944 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-05 14:41:13,960 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-05 14:41:13,975 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-05 14:41:13,975 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-28
+2020-08-05 14:41:13,975 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-05 14:41:13,991 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-05 14:41:13,991 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-05 14:41:14,076 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51811-1596629292771-0:1) uptime 33 minutes | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-05 14:41:14,076 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-51811-1596629292771-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-05 14:41:14,076 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Wed Aug 05 14:08:11 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-28
+2020-08-12 13:06:45,284 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Wed Aug 12 13:06:45 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-08-12 13:06:46,529 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-08-12 13:06:46,814 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-08-12 13:06:46,961 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-08-12 13:06:47,169 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57369-1597230406968-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-08-12 13:06:47,331 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-12 13:06:47,331 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-08-12 13:06:47,347 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-12 13:06:47,347 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-12 13:06:47,347 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-12 13:06:47,363 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-08-12 13:06:47,369 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-08-12 13:06:47,369 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-08-12 13:06:47,385 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-12 13:06:47,532 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-08-12 13:06:47,670 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@497486b3{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-08-12 13:06:47,783 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-08-12 13:06:47,783 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-08-12 13:06:47,783 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57369-1597230406968-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-08-12 13:06:47,783 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-08-12 13:06:48,928 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-12 13:06:48,928 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-08-12 13:08:23,447 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2081000371-53
+2020-08-12 13:08:45,714 | WARN  | /admin/sendMessage.action | org.eclipse.jetty.server.HttpChannel | qtp2081000371-52
+javax.servlet.ServletException: javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:162)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:162)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:567)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	... 17 more
+Caused by: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsyncServlet.service(ServletHolder.java:1411)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1631)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:226)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.apache.activemq.web.AuditFilter.doFilter(AuditFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1618)
+	at org.apache.activemq.web.filter.ApplicationContextFilter.doFilter(ApplicationContextFilter.java:102)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1610)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:549)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:567)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1363)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:489)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1278)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	... 19 more
+Caused by: java.lang.UnsupportedOperationException: Possible CSRF attack
+	at org.apache.activemq.web.handler.BindingBeanNameUrlHandlerMapping.getHandlerInternal(BindingBeanNameUrlHandlerMapping.java:59)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:352)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:940)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 50 more
+2020-08-12 13:38:47,730 | WARN  | Transport Connection to: tcp://127.0.0.1:60371 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:60371@61616
+2020-08-12 13:40:17,346 | WARN  | Transport Connection to: tcp://127.0.0.1:60374 failed: java.io.IOException: Frame size of 1 GB larger than max allowed 100 MB | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:60374@61616
+2020-08-12 13:58:47,321 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | qtp2081000371-44
+2020-08-12 13:58:58,809 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp2081000371-43
+2020-08-12 14:51:35,165 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57369-1597230406968-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-12 14:51:35,165 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-12 14:51:35,165 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-12 14:51:35,165 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-12 14:51:35,165 | INFO  | Could not accept connection during shutdown  : null (null) | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2020-08-12 14:51:35,181 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-12 14:51:35,188 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-12 14:51:35,203 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-12 14:51:35,203 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-28
+2020-08-12 14:51:35,203 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\apache-activemq-5.16.0-bin\apache-activemq-5.16.0\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-28
+2020-08-12 14:51:35,219 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-12 14:51:35,219 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-12 14:51:35,219 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-28
+2020-08-12 14:51:35,304 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57369-1597230406968-0:1) uptime 1 hour 44 minutes | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-12 14:51:35,304 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57369-1597230406968-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-28
+2020-08-12 14:51:35,304 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Wed Aug 12 13:06:45 CEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-28

@@ -2,12 +2,14 @@
 import numpy as np
 import pandas as pd
 import os, shutil
+import time
 
 from utils.input_reader import text_input
 from utils.file_reader import experiment_lastfm
 from utils.generator.question import question_from_v_musics
 from utils.generator.xml_file import xml_from_question
 from utils.output_displayer import lastfm_output_displayer
+from utils.network.file_sender import send_to_greta
 
 from precomputation.lastfm import first_variable_precomputation
 
@@ -53,8 +55,9 @@ if __name__ == "__main__":
         question = question_function(v, tags)
         filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
         xml_from_question(question, filename)
+        send_to_greta("output/" + filename)
+        
         y_or_n = input_function(question)
-
 
         if y_or_n == "y" or y_or_n == "Y" or y_or_n == "yes" or y_or_n == "Yes" :
             experiment_data_ = data_without_v(experiment_data, v, avg, lower=False)
