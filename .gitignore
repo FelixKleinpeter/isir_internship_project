@@ -1,3 +1,5 @@
 # ignore all data
 recommendation/data
 output
+utils/network/activeMQServer
+*/__pycache__
