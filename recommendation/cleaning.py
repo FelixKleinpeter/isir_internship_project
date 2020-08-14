@@ -9,24 +9,22 @@ from recommendation.functions import get_X
 def remove_useless_tags(tags, user_taggedartists, threshold):
     counts = user_taggedartists.tagID.value_counts()
     selected = counts[counts > threshold].index
-    selected_tags = tags[[(i in selected) for i in tags.tagID]]
-    selected_user_taggedartists = user_taggedartists[[(i in selected) for i in user_taggedartists.tagID]]
-
     meaningless_tags = ["chillout", "ambient", "downtempo", "seen live", "beautiful", "amazing", "sexy", "awesome", "cover", "mellow"]
     meaningless_tagIDs = []
     for t in meaningless_tags:
-        meaningless_tagIDs.append(selected_tags[selected_tags.tagValue == t].index[0])
-    selected_tags.drop(meaningless_tagIDs)
-    selected.remove(meaningless_tagIDs)
-
+        meaningless_tagIDs.append(int(tags[tags.tagValue == t].tagID.iloc[0]))
+    setected_tags_data = {
+        "tagID" : selected,
+        "tagValue" : [tags[tags.tagID == str(i)].tagValue.iloc[0] for i in selected]
+    }
     names_to_replace = {"idm": "intelligent dance", "ebm":"electronic body", "00s": "2000s"}
-    ids, values = selected_tags.tagID.values, selected_tags.tagValue.values
-    for i, v in enumerate(values):
-        if v in names_to_replace.keys():
-            values[i] = names_to_replace[v]
-    selected_tags = pd.DataFrame({'tagID': ids, 'tagValue': values})
+    for k, v in names_to_replace.items():
+        for i, e in enumerate(setected_tags_data["tagValue"]):
+            if e == k:
+                setected_tags_data["tagValue"][i] = v
 
-    ###Remove tags from user_taggedartists
+    selected_tags = pd.DataFrame(setected_tags_data)
+    selected_user_taggedartists = user_taggedartists[[(i in selected) for i in user_taggedartists.tagID]]
 
     return selected_tags, selected_user_taggedartists
 
