@@ -1,5 +1,5 @@
 #coding:utf-8
-
+import os, shutil
 
 def clean_directory(folder):
     for filename in os.listdir(folder):

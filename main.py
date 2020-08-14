@@ -1,7 +1,6 @@
 
 import numpy as np
 import pandas as pd
-import os, shutil
 import time
 
 from utils.input_reader import text_input
@@ -13,6 +12,7 @@ from utils.network.file_sender import send_to_greta
 from utils.functions import clean_directory
 
 from precomputation.lastfm import first_variable_precomputation
+from behaviour.behaviour import behaviour_lastfm
 
 ####
 
@@ -28,7 +28,7 @@ from recommendation.functions import get_X, get_y, data_without_v
 
 if __name__ == "__main__":
 
-    #Loading or computing the process dataframe
+    # Loading or computing the process dataframe
     LOAD = True
     df, tags, artists = experiment_lastfm("recommendation/data",load=LOAD)
 
@@ -36,9 +36,14 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
+    behaviour = "COMP" # "WARM" or "COMP"
+    networking = False
 
-    #Loading or computing the first variables / variables tree
+    # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
+
+    # Creating question depending on the selected behaviour
+    questions = behaviour_lastfm(behaviour)
 
     # Question counter
     question_amount = 0
@@ -51,10 +56,14 @@ if __name__ == "__main__":
         else:
             v, _ = random_forest(X, y, randomness = randomness)
         avg = np.mean(X[v])
-        question = question_function(v, tags)
-        filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
-        xml_from_question(question, filename)
-        send_to_greta("output/" + filename)
+        question = question_function(v, tags, questions)
+        if len(questions) > 0:
+            del questions[0]
+
+        if networking:
+            filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
+            xml_from_question(question, filename)
+            send_to_greta("output/" + filename)
 
         y_or_n = input_function(question)
 
@@ -70,8 +79,8 @@ if __name__ == "__main__":
             user_preferences = experiment_data
         question_amount += 1
 
-    prefered_artists = lastfm_output_displayer(user_preferences, artists)
-    print(prefered_artists)
-    print("Question amount %s " % question_amount)
+    recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
+    print(recommendations)
+    #print("Question amount %s " % question_amount)
 
     clean_directory('output')
