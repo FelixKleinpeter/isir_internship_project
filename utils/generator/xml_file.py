@@ -10,7 +10,9 @@ def xml_from_question(question, filename):
     				<reference>tmp/from-fml-apml.pho</reference>
     			</description>
                 """
-    for i, ids in enumerate([(0,1),(2,2),(3,3),(4,6)]):
+    t = len(words)
+    w = [(int(t*k/5),int(t*(k+1)/5)-1) for k in range(5)]
+    for i, ids in enumerate(w):
         output_string += "\n\t"
         output_string += """<tm id="tm""" + str(i+1) + """"/>"""
         output_string += "\n\t\t"
