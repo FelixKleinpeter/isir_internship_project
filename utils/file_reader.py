@@ -3,6 +3,8 @@
 import pickle
 import pandas as pd
 
+from utils.cleaning import create_experiment_df
+
 # LASTFM
 
 def read_lastfm(directory):

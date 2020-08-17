@@ -29,7 +29,7 @@ from recommendation.functions import get_X, get_y, data_without_v
 if __name__ == "__main__":
 
     # Loading or computing the process dataframe
-    LOAD = True
+    LOAD = False
     df, tags, artists = experiment_lastfm("recommendation/data",load=LOAD)
 
     # Parameters
@@ -60,9 +60,9 @@ if __name__ == "__main__":
         if len(questions) > 0:
             del questions[0]
 
+        filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
+        xml_from_question(question, filename)
         if networking:
-            filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
-            xml_from_question(question, filename)
             send_to_greta("output/" + filename)
 
         y_or_n = input_function(question)
