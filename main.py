@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import time
 
-from utils.input_reader import text_input, audio_input
+from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
 from utils.generator.question import question_from_v_musics
 from utils.generator.xml_file import xml_from_question
@@ -29,8 +29,8 @@ from recommendation.functions import get_X, get_y, data_without_v
 if __name__ == "__main__":
 
     # Loading or computing the process dataframe
-    LOAD = False
-    df, tags, artists = experiment_lastfm("recommendation/data",load=LOAD)
+    FORCE_CREATE = False
+    df, tags, artists = experiment_lastfm("recommendation/data",force_create=FORCE_CREATE)
 
     # Parameters
     randomness = 0.7
@@ -47,6 +47,11 @@ if __name__ == "__main__":
 
     # Question counter
     question_amount = 0
+
+    # Output matchers
+    yes = yes_answers()
+    no = no_answers()
+    idk = idk_answers()
 
     experiment_data = df.copy()
     while experiment_data.item.unique().size > 10 and len(get_X(experiment_data).columns) > 1:
@@ -73,13 +78,13 @@ if __name__ == "__main__":
         while True:
             y_or_n = input_function("(y/n/idk)")
 
-            if y_or_n == "y" or y_or_n == "Y" or y_or_n == "yes" or y_or_n == "Yes" :
+            if y_or_n in yes :
                 experiment_data_ = data_without_v(experiment_data, v, avg, lower=False)
                 break
-            elif y_or_n == "n" or y_or_n == "N" or y_or_n == "no" or y_or_n == "No" :
+            elif y_or_n in no :
                 experiment_data_ = data_without_v(experiment_data, v, avg, lower=True)
                 break
-            elif y_or_n == "idk" or y_or_n == "Idk" or y_or_n == "I don't know" or y_or_n == "i don't know" :
+            elif y_or_n in idk :
                 experiment_data_ = data_without_v(experiment_data, v, avg, lower=True, cut = False)
                 break
             else:

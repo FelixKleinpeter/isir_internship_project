@@ -37,9 +37,7 @@ project
 TODO List :
 - Comment code
 - Fix low amount of tag assignment
-- Fix tag name issue
-- Create better case filter for user answer
-- Make automatic loading if the content is here and create it if not
+- Fix tag name issue (change the database itself)
 - Create generator for repeat question based on behavior
 
 

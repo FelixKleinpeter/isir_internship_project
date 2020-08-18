@@ -2,10 +2,11 @@
 
 import pickle
 import pandas as pd
-
-from utils.cleaning import create_experiment_df
+from os import path
 
 # LASTFM
+
+from utils.cleaning import create_experiment_df
 
 def read_lastfm(directory):
     d = directory
@@ -28,21 +29,20 @@ def read_lastfm(directory):
 
     return artists, tags, user_artists, user_friends, user_taggedartists
 
-def experiment_lastfm(directory, load=False, filename='experiment_df_lastfm.pkl'):
+def experiment_lastfm(directory, force_create=False, filename='experiment_df_lastfm.pkl'):
     d = directory
     if d[-1] != "/":
         d += "/"
 
     artists, tags, user_artists, user_friends, user_taggedartists = read_lastfm(d+"lastfm")
-    if not load:
+    if path.exists(d+filename) and force_create == False:
+        f = open(d+filename,'rb')
+        df = pickle.load(f)
+        f.close()
+    else:
         df = create_experiment_df(user_artists, tags, user_taggedartists, 500)
-
         f = d+filename
         outfile = open(f,'wb')
         pickle.dump(df,outfile,protocol=4)
         outfile.close()
-    else:
-        f = open(d+filename,'rb')
-        df = pickle.load(f)
-        f.close()
     return df, tags, artists

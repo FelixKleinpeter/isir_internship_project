@@ -23,3 +23,12 @@ def audio_input(question):
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
     return answer
+
+def yes_answers():
+    return ["y", "Y", "yes", "Yes"]
+
+def no_answers():
+    return ["n", "N", "no", "No"]
+
+def idk_answers():
+    return ["idk", "Idk", "I don't know", "i don't know"]
