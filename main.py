@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import time
 
-from utils.input_reader import text_input
+from utils.input_reader import text_input, audio_input
 from utils.file_reader import experiment_lastfm
 from utils.generator.question import question_from_v_musics
 from utils.generator.xml_file import xml_from_question
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "COMP" # "WARM" or "COMP"
+    behaviour = "WARM" # "WARM" or "COMP"
     networking = False
 
     # Loading or computing the first variables / variables tree
@@ -60,17 +60,37 @@ if __name__ == "__main__":
         if len(questions) > 0:
             del questions[0]
 
-        filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
-        xml_from_question(question, filename)
+
         if networking:
+            filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
+            xml_from_question(question, filename)
             send_to_greta("output/" + filename)
 
-        y_or_n = input_function(question)
+        len_question = len(question.split(' '))
+        print(question)
+        # time.sleep(len_question / 2)
 
-        if y_or_n == "y" or y_or_n == "Y" or y_or_n == "yes" or y_or_n == "Yes" :
-            experiment_data_ = data_without_v(experiment_data, v, avg, lower=False)
-        elif y_or_n == "n" or y_or_n == "N" or y_or_n == "no" or y_or_n == "No" :
-            experiment_data_ = data_without_v(experiment_data, v, avg, lower=True)
+        while True:
+            y_or_n = input_function("(y/n/idk)")
+
+            if y_or_n == "y" or y_or_n == "Y" or y_or_n == "yes" or y_or_n == "Yes" :
+                experiment_data_ = data_without_v(experiment_data, v, avg, lower=False)
+                break
+            elif y_or_n == "n" or y_or_n == "N" or y_or_n == "no" or y_or_n == "No" :
+                experiment_data_ = data_without_v(experiment_data, v, avg, lower=True)
+                break
+            elif y_or_n == "idk" or y_or_n == "Idk" or y_or_n == "I don't know" or y_or_n == "i don't know" :
+                experiment_data_ = data_without_v(experiment_data, v, avg, lower=True, cut = False)
+                break
+            else:
+                repeat = "I didn't understood your answer. Can you please repeat?"
+                print(repeat)
+                if networking:
+                    filename = "repeat.xml"
+                    xml_from_question(repeat, filename)
+                    send_to_greta("output/" + filename)
+
+
         if experiment_data_["item"].size == 0:
              user_preferences = experiment_data
              break
@@ -80,6 +100,10 @@ if __name__ == "__main__":
         question_amount += 1
 
     recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
+    if networking:
+        filename = "recommendations.xml"
+        xml_from_question(recommendations, filename)
+        send_to_greta("output/" + filename)
     print(recommendations)
     #print("Question amount %s " % question_amount)
 

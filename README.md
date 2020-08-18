@@ -36,6 +36,11 @@ project
 
 TODO List :
 - Comment code
+- Fix low amount of tag assignment
+- Fix tag name issue
+- Create better case filter for user answer
+- Make automatic loading if the content is here and create it if not
+- Create generator for repeat question based on behavior
 
 
 Behaviour :
@@ -45,17 +50,8 @@ Behaviour :
   - Use pronouns more than nouns
   - Use verbs and short sentences
   - Look while listening
-  -> Question pool :
-    - Hi "user first name", ready for some questions about your music taste? Let's start! What do you think about .. music? Do you like it?
-    - Then, do you enjoy listening for .. music?
-    - I'm wondering if you like .. music?
-    - Do you like ...
 - Competent
   - Use you words
   - Look while speaking
   - Use you words
   - Use last name?
-  -> Question pool :
-    - The purpose of the questions will be to find which music fit your taste. Do you often listen for .. music?
-    - The next question will be about .. music. Do you listen for it?
-    - Do you like ...

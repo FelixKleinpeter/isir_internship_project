@@ -2,5 +2,5 @@
 recommendation/data
 output
 utils/network/activeMQServer
-*/__pycache__
-*/*/__pycache__
+__pycache__/
+*.pyc

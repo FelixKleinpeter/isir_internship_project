@@ -3,12 +3,13 @@
 import numpy as np
 import pandas as pd
 
-def data_without_v(data, variable, value, lower=True):
+def data_without_v(data, variable, value, lower=True, cut=True):
     d = data.copy()
-    if lower:
-        d = d[d[variable] < value]
-    else:
-        d = d[d[variable] > value]
+    if cut:
+        if lower:
+            d = d[d[variable] < value]
+        else:
+            d = d[d[variable] > value]
     d.drop([variable], axis=1, inplace=True)
     return d
 

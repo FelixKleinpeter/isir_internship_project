@@ -11,7 +11,7 @@ def xml_from_question(question, filename):
     			</description>
                 """
     t = len(words)
-    w = [(int(t*k/5),int(t*(k+1)/5)-1) for k in range(5)]
+    w = [(int(t*k/4),int(t*(k+1)/4)-1) for k in range(4)]
     for i, ids in enumerate(w):
         output_string += "\n\t"
         output_string += """<tm id="tm""" + str(i+1) + """"/>"""

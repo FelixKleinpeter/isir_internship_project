@@ -9,7 +9,7 @@ def audio_input(question):
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print(question)
-        audio = r.record(source, duration=2)
+        audio = r.record(source, duration=4)
 
     answer = ""
     try:
