@@ -53,3 +53,12 @@ Behaviour :
   - Look while speaking
   - Use you words
   - Use last name?
+
+  Emotion = "cross" -> A explorer
+  Premiere partie :
+  C:\Users\f\Desktop\Cours\StageChatbot\greta\greta\greta\bin\BehaviorPlanner\IntentionLexicon
+
+  Competence = dominance 3.5 p.48
+  p.86
+  Beaucoup de gestes idéationels = WARM
+  Positions de repos des bras -> A étudier
