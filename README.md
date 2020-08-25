@@ -39,6 +39,14 @@ TODO List :
 - Fix low amount of tag assignment
 - Fix tag name issue (change the database itself)
 - Create generator for repeat question based on behavior
+- Create body behavior
+  - Add smile
+  - Add rest pose
+  - Use a pool of gesture while talking
+- Catch the end of Greta sentences
+- Create a better interface
+  - Make an introduction : ask user name and email address
+  - Introduce the purpose of the experiment
 
 
 Behaviour :
