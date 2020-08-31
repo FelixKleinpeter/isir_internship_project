@@ -12,7 +12,7 @@ from utils.network.file_sender import send_to_greta
 from utils.functions import clean_directory
 
 from precomputation.lastfm import first_variable_precomputation
-from behaviour.behaviour import behaviour_lastfm
+from behaviour.behaviour import behaviour_lastfm, introduction_lastfm
 
 ####
 
@@ -42,9 +42,6 @@ if __name__ == "__main__":
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
 
-    # Creating question depending on the selected behaviour
-    questions = behaviour_lastfm(behaviour)
-
     # Question counter
     question_amount = 0
 
@@ -52,6 +49,18 @@ if __name__ == "__main__":
     yes = yes_answers()
     no = no_answers()
     idk = idk_answers()
+
+    # Introduction
+    introduction = introduction_lastfm(behaviour)
+    print(introduction)
+    if networking:
+        filename = "introduction.xml"
+        xml_from_question(introduction, filename)
+        send_to_greta("output/" + filename)
+    username = input_function("")
+
+    # Creating question depending on the selected behaviour
+    questions = behaviour_lastfm(behaviour, username)
 
     experiment_data = df.copy()
     while experiment_data.item.unique().size > 10 and len(get_X(experiment_data).columns) > 1:
@@ -70,6 +79,7 @@ if __name__ == "__main__":
             filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
             xml_from_question(question, filename)
             send_to_greta("output/" + filename)
+
 
         len_question = len(question.split(' '))
         print(question)

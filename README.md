@@ -36,17 +36,16 @@ project
 
 TODO List :
 - Comment code
-- Fix low amount of tag assignment
-- Fix tag name issue (change the database itself)
-- Create generator for repeat question based on behavior
+- Fix low amount of tag assignment                                    x
+- Create generator for repeat question based on behavior              x
 - Create body behavior
   - Add smile
   - Add rest pose
   - Use a pool of gesture while talking
 - Catch the end of Greta sentences
-- Create a better interface
-  - Make an introduction : ask user name and email address
-  - Introduce the purpose of the experiment
+- Create a better interface                                            x
+  - Make an introduction : ask user name and email address             x
+  - Introduce the purpose of the experiment                            x
 
 
 Behaviour :
