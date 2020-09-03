@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import time
+from tkinter import *
 
 from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
@@ -65,7 +66,9 @@ if __name__ == "__main__":
     # Creating question depending on the selected behaviour
     questions = behaviour_lastfm(behaviour, username)
 
-    experiment_data = df.copy()
+    #experiment_data = df.copy()
+
+    """
     while experiment_data.item.unique().size > 8 and len(get_X(experiment_data).columns) > 1:
         X, y = get_X(experiment_data), get_y(experiment_data)
         if question_amount == 0:
@@ -116,13 +119,105 @@ if __name__ == "__main__":
             experiment_data = experiment_data_
             user_preferences = experiment_data
         question_amount += 1
+    """
+    ####################################################
 
-    recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
-    if networking:
-        filename = "recommendations.xml"
-        xml_from_question(recommendations, filename, behaviour)
-        send_to_greta("output/" + filename)
-    print(recommendations)
-    #print("Question amount %s " % question_amount)
 
-    clean_directory('output')
+    window = Tk()
+
+    messages = Text(window)
+    messages.pack()
+
+    input_user = StringVar()
+    input_field = Entry(window, text=input_user)
+    input_field.pack(side=BOTTOM, fill=X)
+
+    d = df.copy()
+
+    def Enter_pressed(event):
+        input_get = input_field.get()
+        print(input_get)
+        messages.insert(INSERT, '%s\n' % input_get)
+        input_user.set('')
+        print(1)
+        print(d.head())
+
+        if d.item.unique().size > 8 and len(get_X(d).columns) > 1:
+            X, y = get_X(d), get_y(d)
+            if question_amount == 0:
+                v = choose_randomly(X, first_variables, randomness)
+            else:
+                v, _ = random_forest(X, y, randomness = randomness)
+            avg = np.mean(X[v])
+            question = question_function(v, tags, questions)
+            if len(questions) > 0:
+                del questions[0]
+
+
+            if networking:
+                filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
+                xml_from_question(question, filename, behaviour)
+                send_to_greta("output/" + filename)
+
+
+            len_question = len(question.split(' '))
+            print(question)
+            # time.sleep(len_question / 2)
+
+
+
+            if input_get in yes :
+                d_ = data_without_v(d, v, avg, lower=False)
+            elif input_get in no :
+                d_ = data_without_v(d, v, avg, lower=True)
+            elif input_get in idk :
+                d_ = data_without_v(d, v, avg, lower=True, cut = False)
+            else:
+                repeat = "I didn't understood your answer. Can you please repeat?"
+                print(repeat)
+                if networking:
+                    filename = "repeat.xml"
+                    xml_from_question(repeat, filename, behaviour)
+                    send_to_greta("output/" + filename)
+
+
+            if d_["item"].size == 0:
+                 user_preferences = d
+
+                 # FINISH
+                 recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
+                 if networking:
+                     filename = "recommendations.xml"
+                     xml_from_question(recommendations, filename, behaviour)
+                     send_to_greta("output/" + filename)
+                 print(recommendations)
+
+                 clean_directory('output')
+            else:
+                d = d_
+                user_preferences = d
+            question_amount += 1
+        else:
+            # FINISH
+            recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
+            if networking:
+                filename = "recommendations.xml"
+                xml_from_question(recommendations, filename, behaviour)
+                send_to_greta("output/" + filename)
+            print(recommendations)
+            #print("Question amount %s " % question_amount)
+
+            clean_directory('output')
+
+
+        return "break"
+
+    frame = Frame(window)  # , width=300, height=300)
+    input_field.bind("<Return>", Enter_pressed)
+    frame.pack()
+
+    window.mainloop()
+
+
+
+    ####################################################
