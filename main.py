@@ -51,19 +51,22 @@ if __name__ == "__main__":
     idk = idk_answers()
 
     # Introduction
-    introduction = introduction_lastfm(behaviour)
-    print(introduction)
+    introduction = introduction_lastfm(behaviour, ask = (input_function == text_input))
     if networking:
         filename = "introduction.xml"
-        xml_from_question(introduction, filename)
+        xml_from_question(introduction, filename, behaviour)
         send_to_greta("output/" + filename)
-    username = input_function("")
+    username = "User"
+    if behaviour == "WARM" :
+        username = input_function(introduction)
+    elif behaviour == "COMP" :
+        print(introduction)
 
     # Creating question depending on the selected behaviour
     questions = behaviour_lastfm(behaviour, username)
 
     experiment_data = df.copy()
-    while experiment_data.item.unique().size > 10 and len(get_X(experiment_data).columns) > 1:
+    while experiment_data.item.unique().size > 8 and len(get_X(experiment_data).columns) > 1:
         X, y = get_X(experiment_data), get_y(experiment_data)
         if question_amount == 0:
             v = choose_randomly(X, first_variables, randomness)
@@ -77,7 +80,7 @@ if __name__ == "__main__":
 
         if networking:
             filename = "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml"
-            xml_from_question(question, filename)
+            xml_from_question(question, filename, behaviour)
             send_to_greta("output/" + filename)
 
 
@@ -102,7 +105,7 @@ if __name__ == "__main__":
                 print(repeat)
                 if networking:
                     filename = "repeat.xml"
-                    xml_from_question(repeat, filename)
+                    xml_from_question(repeat, filename, behaviour)
                     send_to_greta("output/" + filename)
 
 
@@ -117,7 +120,7 @@ if __name__ == "__main__":
     recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
     if networking:
         filename = "recommendations.xml"
-        xml_from_question(recommendations, filename)
+        xml_from_question(recommendations, filename, behaviour)
         send_to_greta("output/" + filename)
     print(recommendations)
     #print("Question amount %s " % question_amount)

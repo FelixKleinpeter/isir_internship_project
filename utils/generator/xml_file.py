@@ -1,6 +1,11 @@
 # coding:utf-8
 
-def xml_from_question(question, filename):
+import random as rd
+
+
+def xml_from_question(question, filename, behaviour):
+
+    # =========== SPEECH PART ===========
     words = question.split()
     output_string = """<?xml version="1.0" encoding="ISO-8859-1" ?>
     <fml-apml>
@@ -26,14 +31,29 @@ def xml_from_question(question, filename):
     			<boundary type="LL" id="b1" start="s1:tm5" end="s1:tm5+0.5"/>
     		</speech>
     	</bml>
-    	<fml>
-    		<deictic id="d1" type="selftouch" start="s1:tm2" end="s1:tm3" importance="1.0"/> <!-- target="Andre_chair0" -->
-    		<performative id="p1" type="greet" start="s1:tm1" end="s1:tm2" importance="1.0"/>
-    		<emotion id="e1" type="joyStrong" start="s1:tm2" end="s1:tm3" importance="1.0"/>
-    		<performative id="p2" type="propose" start="s1:tm3" end="s1:tm5" importance="1.0"/>
+    	<fml>"""
+
+    # =========== GESTURE PART ===========
+    first_pool = [("deictic", "selftouch"), ("performative", "suggest")]
+    second_pool = [("performative", "rythm"), ("performative", "suggest"), ("beat", "left"), ("beat", "right")]
+
+    if behaviour == "WARM":
+        output_string += """
+            <emotion id="e1" type="joyStrong" start="s1:tm1" end="s1:tm5" importance="1.0"/>
+        """
+    output_string += sentence_from_pool(first_pool, "1", "tm1", 'tm3')
+    output_string += sentence_from_pool(second_pool, "2", "tm3", "tm5")
+    output_string += """
     	</fml>
     </fml-apml>
     """
 
     with open("output/"+filename,"w") as f:
         f.write(output_string)
+
+def sentence_from_gesture(gesture_type, gesture, id, start, end):
+    return "\n\t<" + gesture_type + " id=\"" + id + "\" type=\"" + gesture + "\" start=\"s1:" + start + "\" end=\"s1:" + end + "\" importance=\"1.0\"/>"
+
+def sentence_from_pool(gesture_pool, id, start, end):
+    chosen_gesture = gesture_pool[rd.randint(0, len(gesture_pool))-1]
+    return sentence_from_gesture(chosen_gesture[0], chosen_gesture[1], id, start, end)

@@ -48,6 +48,8 @@ TODO List :
   - Introduce the purpose of the experiment                            x
 
 
+-> restpose
+
 Behaviour :
 - Warm :
   - Use the user's name
@@ -55,11 +57,16 @@ Behaviour :
   - Use pronouns more than nouns
   - Use verbs and short sentences
   - Look while listening
+
+  - Use "I" more than "us"
+  - Less synonyms -> give the impression that phrases are less meditated
 - Competent
   - Use you words
   - Look while speaking
   - Use you words
   - Use last name?
+
+  - Avoid pronouns to make sentences longer
 
   Emotion = "cross" -> A explorer
   Premiere partie :
