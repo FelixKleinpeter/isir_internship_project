@@ -1,5 +1,6 @@
 #coding:utf-8
 import os, shutil
+from tkinter import *
 
 def clean_directory(folder):
     for filename in os.listdir(folder):
@@ -11,3 +12,10 @@ def clean_directory(folder):
                 shutil.rmtree(file_path)
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
+
+def display(sentence, filename, networking, behaviour, messages):
+    print(sentence)
+    messages.insert(INSERT, '%s\n' % sentence)
+    if networking:
+        xml_from_question(sentence, filename, behaviour)
+        send_to_greta("output/" + filename)
