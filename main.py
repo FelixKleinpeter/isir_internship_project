@@ -3,13 +3,12 @@ import numpy as np
 import pandas as pd
 import time
 from tkinter import *
+import tkinter.font as tkFont
 
 from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
 from utils.generator.question import question_from_v_musics
-from utils.generator.xml_file import xml_from_question
 from utils.output_displayer import lastfm_output_displayer
-from utils.network.file_sender import send_to_greta
 from utils.functions import clean_directory, display
 
 from precomputation.lastfm import first_variable_precomputation
@@ -35,13 +34,13 @@ if __name__ == "__main__":
     input_function = text_input
     question_function = question_from_v_musics
     behaviour = "WARM" # "WARM" or "COMP"
-    networking = False
+    networking = True
 
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
 
     # Question counter
-    question_amount = 1
+    question_amount = 0
 
     # Output matchers
     yes = yes_answers()
@@ -56,11 +55,12 @@ if __name__ == "__main__":
     # Tkinter
     window = Tk()
 
-    messages = Text(window)
+    fontStyle = tkFont.Font(family="Helvetica", size=16)
+    messages = Text(window, font=fontStyle)
     messages.pack()
 
     input_user = StringVar()
-    input_field = Entry(window, text=input_user)
+    input_field = Entry(window, text=input_user, font=fontStyle)
     input_field.pack(side=BOTTOM, fill=X)
 
     # Introduction
@@ -68,7 +68,6 @@ if __name__ == "__main__":
     display(introduction, "introduction.xml", networking, behaviour, messages)
     intro = True
     username = "User"
-
 
     def Enter_pressed(event):
         global experiment_data
@@ -137,31 +136,26 @@ if __name__ == "__main__":
 
             # First end condition : there is no more item in the database, the remaning from the previous questions are recommended
             if experiment_data_["item"].size == 0:
-                 user_preferences = experiment_data
+                user_preferences = experiment_data
 
-                 # FINISH
-                 recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
-
-                 display(recommendations, "recommendations.xml", networking, behaviour, messages)
-
-                 clean_directory('output')
+                # FINISH
+                recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
+                display(recommendations, "recommendations.xml", networking, behaviour, messages)
+                clean_directory('output')
             else:
                 # There is still items in the database : it is updated for further questions
                 experiment_data = experiment_data_
-                user_preferences = experiment_data
+                user_preferences = experiment_data_
             question_amount += 1
         else:
             # Second ending condition : there is less than 8 remaining artists in the database
+
             # FINISH
             recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
-
             display(recommendations, "recommendations.xml", networking, behaviour, messages)
-
-            #print("Question amount %s " % question_amount)
-
             clean_directory('output')
 
-
+        print(experiment_data.size)
         return "break"
 
     frame = Frame(window)  # , width=300, height=300)

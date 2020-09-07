@@ -2,6 +2,9 @@
 import os, shutil
 from tkinter import *
 
+from utils.generator.xml_file import xml_from_question
+from utils.network.file_sender import send_to_greta
+
 def clean_directory(folder):
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)

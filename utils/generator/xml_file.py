@@ -1,6 +1,7 @@
 # coding:utf-8
 
 import random as rd
+from math import ceil
 
 
 def xml_from_question(question, filename, behaviour):
@@ -34,15 +35,19 @@ def xml_from_question(question, filename, behaviour):
     	<fml>"""
 
     # =========== GESTURE PART ===========
-    first_pool = [("deictic", "selftouch"), ("performative", "suggest")]
-    second_pool = [("performative", "rythm"), ("performative", "suggest"), ("beat", "left"), ("beat", "right")]
+    pool = [("deictic", "selftouch"), ("performative", "suggest"), ("performative", "rythm"), ("performative", "suggest"), ("beat", "left"), ("beat", "right")]
+
+    splits = min([len(words) // 10, 5])
+    segments = [ceil(5 / i) for i in range(1, splits+1)]
+    segments += [1]
+    segments.reverse()
 
     if behaviour == "WARM":
         output_string += """
             <emotion id="e1" type="joyStrong" start="s1:tm1" end="s1:tm5" importance="1.0"/>
         """
-    output_string += sentence_from_pool(first_pool, "1", "tm1", 'tm3')
-    output_string += sentence_from_pool(second_pool, "2", "tm3", "tm5")
+    for i in range(len(segments) - 1):
+        output_string += sentence_from_pool(pool, str(i+1), "tm"+str(segments[i]), "tm"+str(segments[i+1]))
     output_string += """
     	</fml>
     </fml-apml>

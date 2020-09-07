@@ -11,7 +11,7 @@ from recommendation.functions import get_X, get_y, data_without_v
 def choose_randomly(data, variables, randomness):
     fe = variables.copy()
     if np.max(fe) == 0:
-        return X.columns[np.random.choice(len(fe))]
+        return data.columns[np.random.choice(len(fe))]
     fe = [i / np.max(fe) for i in fe]
     fe = [i  if i >= (1-randomness) else 0 for i in fe]
     fe = [i / sum(fe) for i in fe]
