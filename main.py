@@ -34,7 +34,7 @@ if __name__ == "__main__":
     input_function = text_input
     question_function = question_from_v_musics
     behaviour = "WARM" # "WARM" or "COMP"
-    networking = True
+    networking = False
 
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
@@ -69,6 +69,11 @@ if __name__ == "__main__":
     intro = True
     username = "User"
 
+    # First question use already computed variables
+    X = get_X(experiment_data)
+    v = choose_randomly(X, first_variables, randomness)
+
+
     def Enter_pressed(event):
         global experiment_data
         global question_amount
@@ -76,6 +81,7 @@ if __name__ == "__main__":
         global username
         global intro
         global questions
+        global v
 
         input_get = input_field.get()
         print(input_get)
@@ -92,10 +98,6 @@ if __name__ == "__main__":
             # Creating question depending on the selected behaviour
             questions = behaviour_lastfm(behaviour, username)
 
-            # First question use already computed variables
-            X = get_X(experiment_data)
-            v = choose_randomly(X, first_variables, randomness)
-            avg = np.mean(X[v])
             question = question_function(v, tags, questions)
             if len(questions) > 0:
                 del questions[0]
@@ -104,35 +106,34 @@ if __name__ == "__main__":
 
             return "break"
 
+        # Switch over the user answer
+        print(tags[tags.tagID == v].tagValue.iloc[0])
+        print(input_get)
+        if input_get in yes :
+            experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=False)
+        elif input_get in no :
+            experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=True)
+        elif input_get in idk :
+            experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=True, cut = False)
+        else:
+            # Case of not understanding
+            repeat = "I didn't understood your answer. Can you please repeat?"
+
+            display(repeat, "repeat.xml", networking, behaviour, messages)
+            return "break"
 
         if experiment_data.item.unique().size > 8 and len(get_X(experiment_data).columns) > 1:
             # Questions after the first one
             X, y = get_X(experiment_data), get_y(experiment_data)
             v, _ = random_forest(X, y, randomness = randomness)
-            avg = np.mean(X[v])
             question = question_function(v, tags, questions)
             if len(questions) > 0:
                 del questions[0]
-
 
             display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages)
 
             len_question = len(question.split(' '))
             # time.sleep(len_question / 2)
-
-            # Switch over the user answer
-            if input_get in yes :
-                experiment_data_ = data_without_v(experiment_data, v, avg, lower=False)
-            elif input_get in no :
-                experiment_data_ = data_without_v(experiment_data, v, avg, lower=True)
-            elif input_get in idk :
-                experiment_data_ = data_without_v(experiment_data, v, avg, lower=True, cut = False)
-            else:
-                # Case of not understanding
-                repeat = "I didn't understood your answer. Can you please repeat?"
-
-                display(repeat, "repeat.xml", networking, behaviour, messages)
-                return "break"
 
             # First end condition : there is no more item in the database, the remaning from the previous questions are recommended
             if experiment_data_["item"].size == 0:
