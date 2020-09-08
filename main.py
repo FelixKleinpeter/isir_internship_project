@@ -1,9 +1,11 @@
 
+import os
 import numpy as np
 import pandas as pd
 import time
 from tkinter import *
 import tkinter.font as tkFont
+from PIL import ImageTk, Image
 
 from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
@@ -63,6 +65,9 @@ if __name__ == "__main__":
     input_field = Entry(window, text=input_user, font=fontStyle)
     input_field.pack(side=BOTTOM, fill=X)
 
+    img = ImageTk.PhotoImage(Image.open("images/hourglass.jpg"))
+    hourglass = Label(input_field, image = img)
+
     # Introduction
     introduction = introduction_lastfm(behaviour, ask = (input_function == text_input))
     display(introduction, "introduction.xml", networking, behaviour, messages)
@@ -107,8 +112,6 @@ if __name__ == "__main__":
             return "break"
 
         # Switch over the user answer
-        print(tags[tags.tagID == v].tagValue.iloc[0])
-        print(input_get)
         if input_get in yes :
             experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=False)
         elif input_get in no :
@@ -124,11 +127,21 @@ if __name__ == "__main__":
 
         if experiment_data.item.unique().size > 8 and len(get_X(experiment_data).columns) > 1:
             # Questions after the first one
+
+            # Hourglass while waiting
+            hourglass.pack(side = "left", fill = Y, expand = None)
+            window.update()
+
             X, y = get_X(experiment_data), get_y(experiment_data)
             v, _ = random_forest(X, y, randomness = randomness)
             question = question_function(v, tags, questions)
             if len(questions) > 0:
                 del questions[0]
+
+            hourglass.pack_forget()
+
+
+
 
             display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages)
 
@@ -150,13 +163,11 @@ if __name__ == "__main__":
             question_amount += 1
         else:
             # Second ending condition : there is less than 8 remaining artists in the database
-
             # FINISH
             recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
             display(recommendations, "recommendations.xml", networking, behaviour, messages)
             clean_directory('output')
 
-        print(experiment_data.size)
         return "break"
 
     frame = Frame(window)  # , width=300, height=300)
