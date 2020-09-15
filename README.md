@@ -43,9 +43,9 @@ TODO List :
 - Catch the end of Greta sentences
 - Create a better interface
   - Introduce the purpose of the experiment
-  - Add hourglass for waiting time
   - Add button choice
 - Fix architecture
+- Gather results
 
 
 -> restpose
@@ -76,3 +76,8 @@ Behaviour :
   p.86
   Beaucoup de gestes idéationels = WARM
   Positions de repos des bras -> A étudier
+
+
+  -> Remove electronica (gather it with electronic)
+  -> Remove alternative?
+  -> Artiste sans nom à enlever

@@ -11,7 +11,7 @@ from utils.input_reader import text_input, audio_input, yes_answers, no_answers,
 from utils.file_reader import experiment_lastfm
 from utils.generator.question import question_from_v_musics
 from utils.output_displayer import lastfm_output_displayer
-from utils.functions import clean_directory, display
+from utils.functions import clean_directory, display, save
 
 from precomputation.lastfm import first_variable_precomputation
 from behaviour.behaviour import behaviour_lastfm, introduction_lastfm
@@ -78,8 +78,7 @@ if __name__ == "__main__":
     X = get_X(experiment_data)
     v = choose_randomly(X, first_variables, randomness)
 
-
-    def Enter_pressed(event):
+    def process(input):
         global experiment_data
         global question_amount
         global user_preferences
@@ -88,17 +87,16 @@ if __name__ == "__main__":
         global questions
         global v
 
-        input_get = input_field.get()
-        print(input_get)
-        messages.insert(INSERT, '%s\n' % input_get)
-        input_user.set('')
+        print(experiment_data.shape)
+
+        finish = False
 
         # Introduction
         if intro :
             intro = False
 
             if behaviour == "WARM" :
-                username = input_get
+                username = input
 
             # Creating question depending on the selected behaviour
             questions = behaviour_lastfm(behaviour, username)
@@ -112,12 +110,12 @@ if __name__ == "__main__":
             return "break"
 
         # Switch over the user answer
-        if input_get in yes :
-            experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=False)
-        elif input_get in no :
-            experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=True)
-        elif input_get in idk :
-            experiment_data_ = data_without_v(experiment_data, v, 0.5, lower=True, cut = False)
+        if input in yes :
+            experiment_data = data_without_v(experiment_data, v, 0.5, lower=False)
+        elif input in no :
+            experiment_data = data_without_v(experiment_data, v, 0.5, lower=True)
+        elif input in idk :
+            experiment_data = data_without_v(experiment_data, v, 0.5, lower=True, cut = False)
         else:
             # Case of not understanding
             repeat = "I didn't understood your answer. Can you please repeat?"
@@ -125,50 +123,81 @@ if __name__ == "__main__":
             display(repeat, "repeat.xml", networking, behaviour, messages)
             return "break"
 
-        if experiment_data.item.unique().size > 8 and len(get_X(experiment_data).columns) > 1:
-            # Questions after the first one
 
-            # Hourglass while waiting
-            hourglass.pack(side = "left", fill = Y, expand = None)
-            window.update()
+        # Questions after the first one
 
-            X, y = get_X(experiment_data), get_y(experiment_data)
-            v, _ = random_forest(X, y, randomness = randomness)
-            question = question_function(v, tags, questions)
-            if len(questions) > 0:
-                del questions[0]
+        # Hourglass while waiting
+        hourglass.pack(side = "left", fill = Y, expand = None)
+        window.update()
 
-            hourglass.pack_forget()
+        X, y = get_X(experiment_data), get_y(experiment_data)
+        v, _ = random_forest(X, y, randomness = randomness)
+        question = question_function(v, tags, questions)
+        if len(questions) > 0:
+            del questions[0]
 
+        hourglass.pack_forget()
 
-
-
+        # First end condition : there is no more item in the database, the remaning from the previous questions are recommended
+        if experiment_data["item"].size == 0 or experiment_data.item.unique().size <= 8 or len(get_X(experiment_data).columns) <= 1:
+            user_preferences = experiment_data
+            finish = True
+        else:
             display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages)
 
-            len_question = len(question.split(' '))
+            # len_question = len(question.split(' '))
             # time.sleep(len_question / 2)
 
-            # First end condition : there is no more item in the database, the remaning from the previous questions are recommended
-            if experiment_data_["item"].size == 0:
-                user_preferences = experiment_data
-
-                # FINISH
-                recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
-                display(recommendations, "recommendations.xml", networking, behaviour, messages)
-                clean_directory('output')
-            else:
-                # There is still items in the database : it is updated for further questions
-                experiment_data = experiment_data_
-                user_preferences = experiment_data_
+            # There is still items in the database : it is updated for further questions
+            user_preferences = experiment_data
             question_amount += 1
-        else:
-            # Second ending condition : there is less than 8 remaining artists in the database
+
+
+        if finish:
             # FINISH
             recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
             display(recommendations, "recommendations.xml", networking, behaviour, messages)
             clean_directory('output')
+            save({"recommendation":recommendations, "username":username, "behaviour":behaviour, "question_amount":question_amount})
+
+
+
+    def Enter_pressed(event):
+
+        input_get = input_field.get()
+        print(input_get)
+        messages.insert(INSERT, '%s\n' % input_get)
+        input_user.set('')
+
+        process(input_get)
 
         return "break"
+
+
+    def Button_yes():
+        input = "Yes"
+        messages.insert(INSERT, '%s\n' % input)
+        print(input)
+        process(input)
+
+    def Button_no():
+        input = "No"
+        messages.insert(INSERT, '%s\n' % input)
+        print(input)
+        process(input)
+
+    def Button_idk():
+        input = "I don't know"
+        messages.insert(INSERT, '%s\n' % input)
+        print(input)
+        process(input)
+
+    B_y = Button(window, text ="Yes", command = Button_yes)
+    B_y.pack(side = "left")
+    B_n = Button(window, text ="No", command = Button_no)
+    B_n.pack(side = "left")
+    B_i = Button(window, text ="I don't know", command = Button_idk)
+    B_i.pack(side = "left")
 
     frame = Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)
