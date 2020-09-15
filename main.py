@@ -12,13 +12,10 @@ from utils.file_reader import experiment_lastfm
 from utils.generator.question import question_from_v_musics
 from utils.output_displayer import lastfm_output_displayer
 from utils.functions import clean_directory, display, save
+from utils.file_reader import read_lastfm
 
 from precomputation.lastfm import first_variable_precomputation
 from behaviour.behaviour import behaviour_lastfm, introduction_lastfm
-
-####
-
-from utils.file_reader import read_lastfm
 from recommendation.recommender import random_forest, choose_randomly
 from recommendation.functions import get_X, get_y, data_without_v
 
@@ -86,8 +83,6 @@ if __name__ == "__main__":
         global intro
         global questions
         global v
-
-        print(experiment_data.shape)
 
         finish = False
 
