@@ -9,7 +9,7 @@ from PIL import ImageTk, Image
 
 from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
-from utils.generator.question import question_from_v_musics
+from utils.generator.question import question_from_v_musics, question_end_experiment
 from utils.output_displayer import lastfm_output_displayer
 from utils.functions import clean_directory, display, save
 from utils.file_reader import read_lastfm
@@ -62,6 +62,9 @@ if __name__ == "__main__":
     input_field = Entry(window, text=input_user, font=fontStyle)
     input_field.pack(side=BOTTOM, fill=X)
 
+
+
+    # Hourglass
     img = ImageTk.PhotoImage(Image.open("images/hourglass.jpg"))
     hourglass = Label(input_field, image = img)
 
@@ -75,12 +78,20 @@ if __name__ == "__main__":
     X = get_X(experiment_data)
     v = choose_randomly(X, first_variables, randomness)
 
+    # True during the experiment, False after the recommendations are given
+    experiment = True
+
+    # Ending questions and answers
+    end_questions = question_end_experiment()
+    end_answers = []
+
     def process(input):
         global experiment_data
         global question_amount
         global user_preferences
         global username
         global intro
+        global experiment
         global questions
         global v
 
@@ -155,44 +166,78 @@ if __name__ == "__main__":
             clean_directory('output')
             save({"recommendation":recommendations, "username":username, "behaviour":behaviour, "question_amount":question_amount})
 
+            # Initializing the end of the process
+            experiment = False
+            B_rn.pack(side = "left")
+            B_ry.pack(side = "left")
+            window.update()
 
+            question = end_questions[0]
+            if len(end_questions) > 0:
+                del end_questions[0]
+
+            display(question, "", False, behaviour, messages)
+
+    def questionnary(input):
+        global end_questions
+        global end_answers
+
+        end_answers.append(input)
+
+        question = end_questions[0]
+        if len(end_questions) > 0:
+            del end_questions[0]
+
+        display(question, "", False, behaviour, messages)
+
+        if len(end_questions) == 0:
+            save({"final_questions":question_end_experiment(), "end_answers":end_answers})
+
+    def send_input(input):
+        print(input)
+        messages.insert(INSERT, '%s\n' % input)
+        if experiment:
+            process(input)
+        else:
+            questionnary(input)
 
     def Enter_pressed(event):
-
-        input_get = input_field.get()
-        print(input_get)
-        messages.insert(INSERT, '%s\n' % input_get)
+        input = input_field.get()
         input_user.set('')
-
-        process(input_get)
+        send_input(input)
 
         return "break"
 
-
     def Button_yes():
         input = "Yes"
-        messages.insert(INSERT, '%s\n' % input)
-        print(input)
-        process(input)
+        send_input(input)
 
     def Button_no():
         input = "No"
-        messages.insert(INSERT, '%s\n' % input)
-        print(input)
-        process(input)
+        send_input(input)
 
     def Button_idk():
         input = "I don't know"
-        messages.insert(INSERT, '%s\n' % input)
-        print(input)
-        process(input)
+        send_input(input)
 
+    def Button_rno():
+        input = "Rather no"
+        send_input(input)
+
+    def Button_ryes():
+        input = "Rather yes"
+        send_input(input)
+
+    # Buttons
     B_y = Button(window, text ="Yes", command = Button_yes)
     B_y.pack(side = "left")
     B_n = Button(window, text ="No", command = Button_no)
     B_n.pack(side = "left")
     B_i = Button(window, text ="I don't know", command = Button_idk)
     B_i.pack(side = "left")
+
+    B_rn = Button(window, text ="Rather yes", command = Button_rno)
+    B_ry = Button(window, text ="Rather no", command = Button_ryes)
 
     frame = Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)

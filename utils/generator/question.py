@@ -19,3 +19,7 @@ def question_from_v_musics(variable, tags, questions=[]):
         new_words = [str(tags[tags.tagID == variable].tagValue.iloc[0]) if w == "*" else w for w in words]
         new_question = " "
         return new_question.join(new_words)
+
+def question_end_experiment():
+    return ["Question 1",
+        "Question 2"]
