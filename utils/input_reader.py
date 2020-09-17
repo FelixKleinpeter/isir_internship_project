@@ -31,4 +31,4 @@ def no_answers():
     return ["n", "N", "no", "No"]
 
 def idk_answers():
-    return ["idk", "Idk", "I don't know", "i don't know"]
+    return ["idk", "Idk", "I don't know", "i don't know", "I don't have a preference"]

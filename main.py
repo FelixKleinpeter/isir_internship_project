@@ -101,6 +101,10 @@ if __name__ == "__main__":
         if intro :
             intro = False
 
+            B_y.pack(side = "left")
+            B_i.pack(side = "left")
+            B_n.pack(side = "left")
+
             if behaviour == "WARM" :
                 username = input
 
@@ -164,12 +168,16 @@ if __name__ == "__main__":
             recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
             display(recommendations, "recommendations.xml", networking, behaviour, messages)
             clean_directory('output')
-            save({"recommendation":recommendations, "username":username, "behaviour":behaviour, "question_amount":question_amount})
+            save({"recommendation":recommendations, "username":username, "behaviour":behaviour, "question_amount":question_amount}, "result")
 
             # Initializing the end of the process
             experiment = False
-            B_rn.pack(side = "left")
+            B_n.pack_forget()
+            B_i.pack_forget()
             B_ry.pack(side = "left")
+            B_i.pack(side = "left")
+            B_rn.pack(side = "left")
+            B_n.pack(side = "left")
             window.update()
 
             question = end_questions[0]
@@ -184,14 +192,16 @@ if __name__ == "__main__":
 
         end_answers.append(input)
 
-        question = end_questions[0]
-        if len(end_questions) > 0:
-            del end_questions[0]
-
-        display(question, "", False, behaviour, messages)
-
         if len(end_questions) == 0:
-            save({"final_questions":question_end_experiment(), "end_answers":end_answers})
+            save({"final_questions":question_end_experiment(), "end_answers":end_answers}, "answers")
+            display("Thank you!", "", networking, False, messages)
+            window.update()
+            time.sleep(3)
+            window.destroy()
+        else:
+            question = end_questions[0]
+            display(question, "", False, behaviour, messages)
+            del end_questions[0]
 
     def send_input(input):
         print(input)
@@ -217,7 +227,7 @@ if __name__ == "__main__":
         send_input(input)
 
     def Button_idk():
-        input = "I don't know"
+        input = "I don't have a preference"
         send_input(input)
 
     def Button_rno():
@@ -229,15 +239,12 @@ if __name__ == "__main__":
         send_input(input)
 
     # Buttons
-    B_y = Button(window, text ="Yes", command = Button_yes)
-    B_y.pack(side = "left")
-    B_n = Button(window, text ="No", command = Button_no)
-    B_n.pack(side = "left")
-    B_i = Button(window, text ="I don't know", command = Button_idk)
-    B_i.pack(side = "left")
+    B_y = Button(window, text ="Yes", command = Button_yes, width=20, height=2)
+    B_n = Button(window, text ="No", command = Button_no, width=20, height=2)
+    B_i = Button(window, text ="I don't have a preference", command = Button_idk, width=20, height=2)
 
-    B_rn = Button(window, text ="Rather yes", command = Button_rno)
-    B_ry = Button(window, text ="Rather no", command = Button_ryes)
+    B_rn = Button(window, text ="Rather yes", command = Button_rno, width=20, height=2)
+    B_ry = Button(window, text ="Rather no", command = Button_ryes, width=20, height=2)
 
     frame = Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)

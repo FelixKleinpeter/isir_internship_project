@@ -20,16 +20,18 @@ def clean_directory(folder):
 def display(sentence, filename, networking, behaviour, messages):
     print(sentence)
     messages.insert(INSERT, '%s\n' % sentence)
+    messages.see("end")
     if networking:
         xml_from_question(sentence, filename, behaviour)
         send_to_greta("output/" + filename)
 
-def save(dictionnary):
+def save(dictionnary, name):
     # Save a dictionnary of elements under the name "result_x" where x is the number in the "count.txt" file. Increase the number in this file.
     count_file = open("results/count.txt", "r")
     count = int(count_file.read())
+    while os.path.exists("results/"+name+str(count)+".p"):
+        count_file = open("results/count.txt", "w")
+        count += 1
+        count_file.write(str(count))
 
-    count_file = open("results/count.txt", "w")
-    count_file.write(str(count+1))
-
-    pickle.dump( dictionnary, open( "results/result_"+str(count)+".p", "wb" ) )
+    pickle.dump( dictionnary, open( "results/"+name+str(count)+".p", "wb" ) )
