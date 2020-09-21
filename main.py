@@ -25,7 +25,7 @@ from recommendation.functions import get_X, get_y, data_without_v
 if __name__ == "__main__":
 
     # Loading or computing the process dataframe
-    FORCE_CREATE = False
+    FORCE_CREATE = True
     df, tags, artists = experiment_lastfm("recommendation/data",force_create=FORCE_CREATE)
 
     # Parameters
