@@ -25,7 +25,7 @@ from recommendation.functions import get_X, get_y, data_without_v
 if __name__ == "__main__":
 
     # Loading or computing the process dataframe
-    FORCE_CREATE = True
+    FORCE_CREATE = False
     df, tags, artists = experiment_lastfm("recommendation/data",force_create=FORCE_CREATE)
 
     # Parameters
@@ -243,8 +243,8 @@ if __name__ == "__main__":
     B_n = Button(window, text ="No", command = Button_no, width=20, height=2)
     B_i = Button(window, text ="I don't have a preference", command = Button_idk, width=20, height=2)
 
-    B_rn = Button(window, text ="Rather yes", command = Button_rno, width=20, height=2)
-    B_ry = Button(window, text ="Rather no", command = Button_ryes, width=20, height=2)
+    B_rn = Button(window, text ="Rather no", command = Button_rno, width=20, height=2)
+    B_ry = Button(window, text ="Rather yes", command = Button_ryes, width=20, height=2)
 
     frame = Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)

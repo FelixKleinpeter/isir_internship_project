@@ -26,7 +26,7 @@ def read_lastfm(directory):
     user_artists = pd.read_csv(d + "user_artists.dat", sep="\t", usecols=['userID', 'artistID', 'weight'])
     user_friends = pd.read_csv(d + "user_friends.dat", sep="\t", usecols=['userID', 'friendID'])
     #user_taggedartists = pd.read_csv(d + "user_taggedartists.dat", sep="\t", usecols=['userID', 'artistID', 'tagID', 'day', 'month', 'year'])
-    user_taggedartists = pickle.load( open( d + "uta.p", "rb" ) )
+    user_taggedartists = pickle.load( open( d + "user_taggedartists.p", "rb" ) )
 
     return artists, tags, user_artists, user_friends, user_taggedartists
 

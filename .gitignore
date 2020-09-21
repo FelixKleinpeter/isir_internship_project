@@ -4,3 +4,4 @@ output
 utils/network/activeMQServer
 __pycache__/
 *.pyc
+results
