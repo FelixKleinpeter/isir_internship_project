@@ -53,9 +53,10 @@ if __name__ == "__main__":
 
     # Tkinter
     window = Tk()
+    window.title("Interactive recommendation system")
 
     fontStyle = tkFont.Font(family="Helvetica", size=16)
-    messages = Text(window, font=fontStyle)
+    messages = Text(window, state='disabled', font=fontStyle)
     messages.pack()
 
     input_user = StringVar()
@@ -101,9 +102,8 @@ if __name__ == "__main__":
         if intro :
             intro = False
 
-            B_y.pack(side = "left")
-            B_i.pack(side = "left")
-            B_n.pack(side = "left")
+            for b in initial_buttons:
+                button_dict[b].pack(side = "left")
 
             if behaviour == "WARM" :
                 username = input
@@ -172,12 +172,10 @@ if __name__ == "__main__":
 
             # Initializing the end of the process
             experiment = False
-            B_n.pack_forget()
-            B_i.pack_forget()
-            B_ry.pack(side = "left")
-            B_i.pack(side = "left")
-            B_rn.pack(side = "left")
-            B_n.pack(side = "left")
+            for b in initial_buttons:
+                button_dict[b].pack_forget()
+            for b in ending_buttons:
+                button_dict[b].pack(side = "left")
             window.update()
 
             question = end_questions[0]
@@ -205,7 +203,12 @@ if __name__ == "__main__":
 
     def send_input(input):
         print(input)
-        messages.insert(INSERT, '%s\n' % input)
+
+        # Change the state allow to write on the read only window
+        messages.configure(state='normal')
+        messages.insert(INSERT, '> %s\n' % input)
+        messages.configure(state='disabled')
+
         if experiment:
             process(input)
         else:
@@ -218,34 +221,24 @@ if __name__ == "__main__":
 
         return "break"
 
-    def Button_yes():
-        input = "Yes"
-        send_input(input)
-
-    def Button_no():
-        input = "No"
-        send_input(input)
-
-    def Button_idk():
-        input = "I don't have a preference"
-        send_input(input)
-
-    def Button_rno():
-        input = "Rather no"
-        send_input(input)
-
-    def Button_ryes():
-        input = "Rather yes"
+    def button(input):
         send_input(input)
 
     # Buttons
-    B_y = Button(window, text ="Yes", command = Button_yes, width=20, height=2)
-    B_n = Button(window, text ="No", command = Button_no, width=20, height=2)
-    B_i = Button(window, text ="I don't have a preference", command = Button_idk, width=20, height=2)
-
-    B_rn = Button(window, text ="Rather no", command = Button_rno, width=20, height=2)
-    B_ry = Button(window, text ="Rather yes", command = Button_ryes, width=20, height=2)
-
+    initial_buttons = ["Yes", "I don't have a preference", "No"]
+    ending_buttons = ["Completely", "Rather yes", "I don't know", "Rather not", "Not at all"]
+    # A loop doesn't work because the iterator will change and functions won't work
+    button_dict = {
+        "Yes":Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),
+        "I don't have a preference":Button(window, text = "I don't have a preference", command = lambda: button("I don't have a preference"), width=20, height=2),
+        "No":Button(window, text = "No", command = lambda: button("No"), width=20, height=2),
+        "Completely":Button(window, text = "Completely", command = lambda: button("Completely"), width=20, height=2),
+        "Rather yes":Button(window, text =  "Rather yes", command = lambda: button( "Rather yes"), width=20, height=2),
+        "I don't know":Button(window, text = "I don't know", command = lambda: button("I don't know"), width=20, height=2),
+        "Rather not":Button(window, text = "Rather not", command = lambda: button("Rather not"), width=20, height=2),
+        "Not at all":Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2)
+    }
+    
     frame = Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)
     frame.pack()

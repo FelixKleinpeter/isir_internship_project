@@ -21,16 +21,18 @@ def question_from_v_musics(variable, tags, questions=[]):
         return new_question.join(new_words)
 
 def question_end_experiment():
-    return [ "Is there one or more artists you already know in these recommendations?",
-        "If there are artists you don't know, would you like to check for these artists?",
-        "Are these recommendations aligned with your expectations? ",
-        "Are you satisfied with these recommendations?",
-        "During the experiment, did you feel that the agent was well-intended?",
-        "Did you feel that the agent was trustworthy?",
-        "Did you have confidence in the agent?",
-        "Did the agent think that the agent was asking intelligent questions?",
-        "Did the agent look capable?",
-        "Do you think that the agent was irrelevant?",
-        "Did the agent give you a bad feeling?",
-        "Did you feel that the agent was sympathetic?",
-        "Was the agent warm?"]
+    return [ "\nIt is the end of the experiment. We will give you some sentences, and you will have to say if you agree or disagree with them, on a five degree scale from \"Not at all\" to \"Completely\". \n\nYou like to listen to music offently.",
+        "Among the music of the last century, there are lot of artists you like.",
+        "There are artists you already know in these recommendations.",
+        "You will check for the artists you don't know.",
+        "These recommendations aligned to your expectations.",
+        "You are satisfied with the recommendations.",
+        "You feel that the agent is well-intended.",
+        "The agent is truthworthy.",
+        "You have confidence in the agent.",
+        "The questions of the agent were intelligent.",
+        "The agent look capable.",
+        "The agent is irrelevant.",
+        "The agent gives you a bad feeling.",
+        "The agent is sympathic.",
+        "The agent is warm."]

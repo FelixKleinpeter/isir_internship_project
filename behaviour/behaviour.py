@@ -21,11 +21,11 @@ def behaviour_lastfm(behaviour, username):
 
 def introduction_lastfm(behaviour, ask = False):
     if behaviour == "WARM":
-        s = "Nice to meet you! I would like to ask you some questions about your music taste to find new artists to recommend. After each of your answers, I will try to find the best question to find what to recommend to you as fast as possible! "
+        s = "Nice to meet you! I would like to ask you some questions about your music taste to find new artists to recommend. After each of your answers, I will try to find the best question to find what to recommend to you as fast as possible! We have a lot of artists, all of them are quite recent. "
         if ask :
             s += "I'm Camille, what is your name?"
         return s
     elif behaviour == "COMP":
-        s = "Hello, user. Our purpose is to ask questions about music tastes to recommend new artists. After each answer, we find the next question to ask to reduce the total amount of questions. "
+        s = "Hello, user. Our purpose is to ask questions about music tastes to recommend new artists. After each answer, we find the next question to ask to reduce the total amount of questions. All the artists are from the last century. "
         return s
     return ""

@@ -19,7 +19,10 @@ def clean_directory(folder):
 
 def display(sentence, filename, networking, behaviour, messages):
     print(sentence)
+    # Change the state allow to write on the read only window
+    messages.configure(state='normal')
     messages.insert(INSERT, '%s\n' % sentence)
+    messages.configure(state='disabled')
     messages.see("end")
     if networking:
         xml_from_question(sentence, filename, behaviour)
