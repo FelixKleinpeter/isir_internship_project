@@ -226,19 +226,19 @@ if __name__ == "__main__":
 
     # Buttons
     initial_buttons = ["Yes", "I don't have a preference", "No"]
-    ending_buttons = ["Completely", "Rather yes", "I don't know", "Rather not", "Not at all"]
+    ending_buttons = ["Not at all", "Somewhat Disagree", "Neither Agree nor Disagree", "Somewhat Agree", "Completely Agree"]
     # A loop doesn't work because the iterator will change and functions won't work
     button_dict = {
         "Yes":Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),
         "I don't have a preference":Button(window, text = "I don't have a preference", command = lambda: button("I don't have a preference"), width=20, height=2),
         "No":Button(window, text = "No", command = lambda: button("No"), width=20, height=2),
-        "Completely":Button(window, text = "Completely", command = lambda: button("Completely"), width=20, height=2),
-        "Rather yes":Button(window, text =  "Rather yes", command = lambda: button( "Rather yes"), width=20, height=2),
-        "I don't know":Button(window, text = "I don't know", command = lambda: button("I don't know"), width=20, height=2),
-        "Rather not":Button(window, text = "Rather not", command = lambda: button("Rather not"), width=20, height=2),
+        "Completely Agree":Button(window, text = "Completely Agree", command = lambda: button("Completely Agree"), width=20, height=2),
+        "Somewhat Agree":Button(window, text =  "Somewhat Agree", command = lambda: button( "Somewhat Agree"), width=20, height=2),
+        "Neither Agree nor Disagree":Button(window, text = "Neither Agree nor Disagree", command = lambda: button("Neither Agree nor Disagree"), width=20, height=2),
+        "Somewhat Disagree":Button(window, text = "Somewhat Disagree", command = lambda: button("Somewhat Disagree"), width=20, height=2),
         "Not at all":Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2)
     }
-    
+
     frame = Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)
     frame.pack()

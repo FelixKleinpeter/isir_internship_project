@@ -21,18 +21,19 @@ def question_from_v_musics(variable, tags, questions=[]):
         return new_question.join(new_words)
 
 def question_end_experiment():
-    return [ "\nIt is the end of the experiment. We will give you some sentences, and you will have to say if you agree or disagree with them, on a five degree scale from \"Not at all\" to \"Completely\". \n\nYou like to listen to music offently.",
-        "Among the music of the last century, there are lot of artists you like.",
-        "There are artists you already know in these recommendations.",
-        "You will check for the artists you don't know.",
-        "These recommendations aligned to your expectations.",
+    return [ "\nIt is the end of the experiment. We will give you some sentences, and you will have to say if you agree or disagree with them, on a five degree scale from \"Not at all\" to \"Completely\". \n\nYou enjoy listening to music.",
+        "Which genres of music do you listen to? a) Rock     b ) Dance/Electronic     c) Rap/R&B/HipHop    d) Jazz      e) .......       g) Othe",
+        "There are artists you recognize in the recommendations..",
+        "The questions asked by Alice are intelligent.",
+        "Alice is friendly.",
+        "You are interested in listening to the music recommended by Alice.",
+        "Alice's recommendations are trustworthy.",
+        "Alice looks capable.",
         "You are satisfied with the recommendations.",
-        "You feel that the agent is well-intended.",
-        "The agent is truthworthy.",
-        "You have confidence in the agent.",
-        "The questions of the agent were intelligent.",
-        "The agent look capable.",
-        "The agent is irrelevant.",
-        "The agent gives you a bad feeling.",
-        "The agent is sympathic.",
-        "The agent is warm."]
+        "Alice's behavior is aggressive.",
+        "You feel that Alice is well-intended.",
+        "Alice is irrelevant. <!>",
+        "Alice is warm.",
+        "The recommendations align with your expectations.",
+        "You have confidence in Alice.",
+        ]
