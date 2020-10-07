@@ -32,7 +32,7 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "WARM" # "WARM" or "COMP"
+    behaviour = "COMP" # "WARM" or "COMP"
     networking = False
 
     # Loading or computing the first variables / variables tree

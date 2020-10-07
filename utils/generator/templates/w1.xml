@@ -3,27 +3,24 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>Let's
-<tm id="tm1"/>start,
+            <tm id="tm0"/>We
+<tm id="tm1"/>are
 <tm
-                id="tm2"/>username!
-<tm id="tm3"/>What
+                id="tm2"/>interested
+<tm id="tm3"/>in
 <tm
-                id="tm4"/>do
-<tm id="tm5"/>you
-<tm id="tm6"/>think
+                id="tm4"/>knowing
+<tm id="tm5"/>if
+<tm id="tm6"/>you
 <tm
-                id="tm7"/>about
-<tm id="tm8"/>rock
+                id="tm7"/>often
+<tm id="tm8"/>listen
 <tm
-                id="tm9"/>music?
-<tm id="tm10"/>Do
+                id="tm9"/>to
+<tm id="tm10"/>rock
 <tm
-                id="tm11"/>you
-<tm id="tm12"/>like
-<tm
-                id="tm13"/>it?
-<tm id="tm13"/>
+                id="tm11"/>music.
+<tm id="tm11"/>
             <pitchaccent end="s1:tm1" id="xpa0" importance="1"
                 level="strong" start="s1:tm0" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa1" importance="1"
@@ -48,65 +45,14 @@
                 level="strong" start="s1:tm10" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa11" importance="1"
                 level="strong" start="s1:tm11" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa12" importance="1"
-                level="strong" start="s1:tm12" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa13" importance="1"
-                level="strong" start="s1:tm13" type="Hstar"/>
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm7-0.2" id="id_1" importance="1.0"
-            main="im_5" start="s1:tm0-0.2"/>
-        <imageschema POSroot="noun" end="s1:tm12-0.2" id="im_5"
-            importance="1.0" indexword="7" start="s1:tm11-0.2" type="object"/>
-        <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_6"
-            importance="1.0" indexword="7" start="s1:tm12-0.2" type="object"/>
+        <ideationalunit end="s1:tm12-0.2" id="id_0" importance="1.0"
+            main="im_3" start="s1:tm0-0.2"/>
+        <imageschema POSroot="adverb" end="s1:tm11-0.2" id="im_3"
+            importance="1.0" previous="true" start="s1:tm3-0.2" type="in"/>
+        <imageschema POSroot="noun" end="s1:tm12-0.2" id="im_4"
+            importance="1.0" start="s1:tm11-0.2" type="object"/>
     </fml>
 </fml-apml>
-
-
-
-
-
-
-
-
-<!--
-<bml>
-<speech id="s1" language="english" start="0.0" text="" type="SAPI4" voice="marytts" xmlns="">
-<description level="1" type="gretabml"><reference>tmp/from-fml-apml.pho</reference></description>
-
-<tm id="tm0"/>Let's
-<tm id="tm1"/>start,
-<tm id="tm2"/>username!
-<tm id="tm3"/>What
-<tm id="tm4"/>do
-<tm id="tm5"/>you
-<tm id="tm6"/>think
-<tm id="tm7"/>about
-<tm id="tm8"/>rock
-<tm id="tm9"/>music?
-<tm id="tm10"/>Do
-<tm id="tm11"/>you
-<tm id="tm12"/>like
-<tm id="tm13"/>it?
-<tm id="tm13"/>
-<pitchaccent id='xpa0' type='Hstar' start='s1:tm0' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa1' type='Hstar' start='s1:tm1' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa2' type='Hstar' start='s1:tm2' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa3' type='Hstar' start='s1:tm3' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa4' type='Hstar' start='s1:tm4' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa5' type='Hstar' start='s1:tm5' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa6' type='Hstar' start='s1:tm6' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa7' type='Hstar' start='s1:tm7' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa8' type='Hstar' start='s1:tm8' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa9' type='Hstar' start='s1:tm9' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa10' type='Hstar' start='s1:tm10' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa11' type='Hstar' start='s1:tm11' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa12' type='Hstar' start='s1:tm12' end='s1:tm1' level='strong' importance='1'/>
-<pitchaccent id='xpa13' type='Hstar' start='s1:tm13' end='s1:tm1' level='strong' importance='1'/>
-</speech>
-</bml>
-
--->
-

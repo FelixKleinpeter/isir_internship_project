@@ -11,11 +11,13 @@ def behaviour_lastfm(behaviour, username):
         questions.append("I think I'm close to find new artists for you! Tell me, "+username+", do you like * music?")
         questions.append("And what about * music?")
     elif behaviour == "COMP":
-        questions.append("Do you often listen to * music?")
+        questions.append("We are interested in knowing if you often listen to * music.")
         questions.append("Then, do you listen to * music?")
-        questions.append("Do you like * music?")
-        questions.append("Then, * music?")
-        questions.append("Do you listen to * music?")
+        questions.append("And * music?")
+        questions.append("Given this, we would like to know if you appreciate * music.")
+        questions.append("Do you often listen to * music?")
+        questions.append("At this state of the process, we are concerned with your taste for * music. Do you often listen to it?")
+        questions.append("Then, do you listen to * music?")
         questions.append("We are reaching the end of the experiment. Do you like * music?")
     return questions
 

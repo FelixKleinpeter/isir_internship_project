@@ -46,6 +46,28 @@ TODO List :
   - Add button choice
 - Fix architecture
 - Gather results
+- Fix start with competence mode
+- Fix display at the end
+
+- Internship report :
+- Graphs :
+  - LASTFM tag assignment
+  - Pre-computed trees
+  - Bad data spreads
+  - Good data spreads
+
+FOR THIS WEEK :
+- Improve competence questions ~
+- Improve the amount of questions (more close to 15)
+- Meaning Miner : add a module to load a file for each sentence
+- Do research and add knowledge on rest pose
+- Refactor the beginning of the report
+- Add references to the recommendation system part
+- Change introduction of the experiment to ask questions about recent music
+- Create the tree for computation speed
+- Have the software working at home
+
+
 
 
 -> restpose
@@ -64,7 +86,6 @@ Behaviour :
   - Use you words
   - Look while speaking
   - Use you words
-  - Use last name?
 
   - Avoid pronouns to make sentences longer
 
