@@ -33,7 +33,7 @@ if __name__ == "__main__":
     input_function = text_input
     question_function = question_from_v_musics
     behaviour = "COMP" # "WARM" or "COMP"
-    networking = False
+    networking = True
 
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     # Introduction
     introduction = introduction_lastfm(behaviour, ask = (input_function == text_input))
-    display(introduction, "introduction.xml", networking, behaviour, messages)
+    display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
     intro = True
     username = "User"
 
@@ -115,7 +115,8 @@ if __name__ == "__main__":
             if len(questions) > 0:
                 del questions[0]
 
-            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages)
+            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]))
+            question_amount += 1
 
             return "break"
 
@@ -153,7 +154,7 @@ if __name__ == "__main__":
             user_preferences = experiment_data
             finish = True
         else:
-            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages)
+            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]))
 
             # len_question = len(question.split(' '))
             # time.sleep(len_question / 2)
@@ -227,6 +228,7 @@ if __name__ == "__main__":
     # Buttons
     initial_buttons = ["Yes", "I don't have a preference", "No"]
     ending_buttons = ["Not at all", "Somewhat Disagree", "Neither Agree nor Disagree", "Somewhat Agree", "Completely Agree"]
+    starting_buttons = ["Not at all", "Somewhat Disagree", "Neither Agree nor Disagree", "Somewhat Agree", "Completely Agree"]
     # A loop doesn't work because the iterator will change and functions won't work
     button_dict = {
         "Yes":Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),

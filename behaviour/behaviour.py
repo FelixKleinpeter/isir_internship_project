@@ -29,5 +29,7 @@ def introduction_lastfm(behaviour, ask = False):
         return s
     elif behaviour == "COMP":
         s = "Hello, user, my name is Alice. Our purpose is to ask questions about music tastes to recommend new artists. After each answer, we find the next question to ask to reduce the total amount of questions. All the artists are from the last century. "
+        if ask :
+            s += "Are you ready to start?"
         return s
     return ""

@@ -5,21 +5,17 @@
             type="SAPI4" voice="marytts" xmlns="">
             <tm id="tm0"/>We
 <tm id="tm1"/>are
-<tm
-                id="tm2"/>interested
+<tm id="tm2"/>interested
 <tm id="tm3"/>in
-<tm
-                id="tm4"/>knowing
+<tm id="tm4"/>knowing
 <tm id="tm5"/>if
 <tm id="tm6"/>you
-<tm
-                id="tm7"/>often
+<tm id="tm7"/>often
 <tm id="tm8"/>listen
-<tm
-                id="tm9"/>to
-<tm id="tm10"/>rock
-<tm
-                id="tm11"/>music.
+<tm id="tm9"/>to
+<tm id="tm10"/>
+*
+<tm id="tm11"/>music.
 <tm id="tm11"/>
             <pitchaccent end="s1:tm1" id="xpa0" importance="1"
                 level="strong" start="s1:tm0" type="Hstar"/>

@@ -5,6 +5,7 @@ import pickle
 
 from utils.generator.xml_file import xml_from_question
 from utils.network.file_sender import send_to_greta
+from behaviour.body_behaviour import fml_from_template
 
 def clean_directory(folder):
     for filename in os.listdir(folder):
@@ -17,7 +18,7 @@ def clean_directory(folder):
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-def display(sentence, filename, networking, behaviour, messages):
+def display(sentence, filename, networking, behaviour, messages, question = -1, variable = ""):
     print(sentence)
     # Change the state allow to write on the read only window
     messages.configure(state='normal')
@@ -25,7 +26,13 @@ def display(sentence, filename, networking, behaviour, messages):
     messages.configure(state='disabled')
     messages.see("end")
     if networking:
-        xml_from_question(sentence, filename, behaviour)
+        if variable == "":
+            xml_from_question(sentence, filename, behaviour)
+        else:
+            if question != -1:
+                fml_from_template(variable, filename, behaviour, question)
+            else:
+                fml_from_template(variable, filename, behaviour, question)
         send_to_greta("output/" + filename)
 
 def save(dictionnary, name):
