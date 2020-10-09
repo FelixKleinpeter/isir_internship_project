@@ -21,9 +21,10 @@ def question_from_v_musics(variable, tags, questions=[]):
         return new_question.join(new_words)
 
 def question_end_experiment():
-    return [ "\nIt is the end of the experiment. We will give you some sentences, and you will have to say if you agree or disagree with them, on a five degree scale from \"Not at all\" to \"Completely\". \n\nYou enjoy listening to music.",
-        "Which genres of music do you listen to? a) Rock     b ) Dance/Electronic     c) Rap/R&B/HipHop    d) Jazz      e) .......       g) Othe",
-        "There are artists you recognize in the recommendations..",
+    return [ "During this experiment, an agent will ask you some questions about your music taste. Before starting, we would like to have a quick overview of them. We will give you some sentences, and you will have to say if you agree or disagree with them, on a five degree scale from \"Not at all\" to \"Completely\". \n\nYou enjoy listening to music.",
+        "Our database contains a majority of english-speaking artists from the last seven decades. Among this kind, there are artists that you appreciate?",
+        "The experiment will start now. Please press any button when you are ready to start.",
+        "\nIt is the end of the experiment. Again, we will give you some sentences, and you will have to say if you agree or disagree with them, on a five degree scale from \"Not at all\" to \"Completely\". \n\nThere are artists you recognize in the recommendations.",
         "The questions asked by Alice are intelligent.",
         "Alice is friendly.",
         "You are interested in listening to the music recommended by Alice.",
@@ -32,7 +33,7 @@ def question_end_experiment():
         "You are satisfied with the recommendations.",
         "Alice's behavior is aggressive.",
         "You feel that Alice is well-intended.",
-        "Alice is irrelevant. <!>",
+        "Alice doesn't look competent.",
         "Alice is warm.",
         "The recommendations align with your expectations.",
         "You have confidence in Alice.",

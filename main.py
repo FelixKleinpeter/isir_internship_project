@@ -32,8 +32,8 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "COMP" # "WARM" or "COMP"
-    networking = True
+    behaviour = "WARM" # "WARM" or "COMP"
+    networking = False
 
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
@@ -79,8 +79,8 @@ if __name__ == "__main__":
     X = get_X(experiment_data)
     v = choose_randomly(X, first_variables, randomness)
 
-    # True during the experiment, False after the recommendations are given
-    experiment = True
+    # True during the experiment, False after the recommendations are given and during the taste questions
+    experiment = False
 
     # Ending questions and answers
     end_questions = question_end_experiment()
@@ -188,6 +188,7 @@ if __name__ == "__main__":
     def questionnary(input):
         global end_questions
         global end_answers
+        global experiment
 
         end_answers.append(input)
 
@@ -201,6 +202,8 @@ if __name__ == "__main__":
             question = end_questions[0]
             display(question, "", False, behaviour, messages)
             del end_questions[0]
+            if len(end_questions) < 13:
+                experiment = True
 
     def send_input(input):
         print(input)
@@ -228,7 +231,8 @@ if __name__ == "__main__":
     # Buttons
     initial_buttons = ["Yes", "I don't have a preference", "No"]
     ending_buttons = ["Not at all", "Somewhat Disagree", "Neither Agree nor Disagree", "Somewhat Agree", "Completely Agree"]
-    starting_buttons = ["Not at all", "Somewhat Disagree", "Neither Agree nor Disagree", "Somewhat Agree", "Completely Agree"]
+    # Most popular : rock, pop, alternative, electronic, indie, female vocalist, 80s, dance, alternative rock, classic rock, british, indie rock, singer-songwritter, hard rock, experimental, metal
+    taste_buttons = ["Rock", "Alternative", "Electronic", "Indie", "Dance", "Other"]
     # A loop doesn't work because the iterator will change and functions won't work
     button_dict = {
         "Yes":Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),
@@ -238,7 +242,13 @@ if __name__ == "__main__":
         "Somewhat Agree":Button(window, text =  "Somewhat Agree", command = lambda: button( "Somewhat Agree"), width=20, height=2),
         "Neither Agree nor Disagree":Button(window, text = "Neither Agree nor Disagree", command = lambda: button("Neither Agree nor Disagree"), width=20, height=2),
         "Somewhat Disagree":Button(window, text = "Somewhat Disagree", command = lambda: button("Somewhat Disagree"), width=20, height=2),
-        "Not at all":Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2)
+        "Not at all":Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2),
+        "Rock":Button(window, text = "Rock", command = lambda: button("Rock"), width=20, height=2),
+        "Alternative":Button(window, text = "Alternative", command = lambda: button("Alternative"), width=20, height=2),
+        "Electronic":Button(window, text = "Electronic", command = lambda: button("Electronic"), width=20, height=2),
+        "Indie":Button(window, text = "Indie", command = lambda: button("Indie"), width=20, height=2),
+        "Dance":Button(window, text = "Dance", command = lambda: button("Dance"), width=20, height=2),
+        "Other":Button(window, text = "Other", command = lambda: button("Other"), width=20, height=2),
     }
 
     frame = Frame(window)  # , width=300, height=300)
