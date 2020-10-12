@@ -3,7 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 import time
-from tkinter import *
+import tkinter as tk
 import tkinter.font as tkFont
 from PIL import ImageTk, Image
 
@@ -52,26 +52,29 @@ if __name__ == "__main__":
     user_preferences = pd.DataFrame()
 
     # Tkinter
-    window = Tk()
+    window = tk.Tk()
     window.title("Interactive recommendation system")
 
+    scrollbar = tk.Scrollbar(window)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+
     fontStyle = tkFont.Font(family="Helvetica", size=16)
-    messages = Text(window, state='disabled', font=fontStyle)
+    messages = tk.Text(window, state='disabled', font=fontStyle, yscrollcommand = scrollbar.set)
     messages.pack()
 
-    input_user = StringVar()
-    input_field = Entry(window, text=input_user, font=fontStyle)
-    input_field.pack(side=BOTTOM, fill=X)
+    scrollbar.config(command=messages.yview)
 
-
+    input_user = tk.StringVar()
+    input_field = tk.Entry(window, text=input_user, font=fontStyle)
+    #input_field.pack(side=BOTTOM, fill=X)
 
     # Hourglass
     img = ImageTk.PhotoImage(Image.open("images/hourglass.jpg"))
-    hourglass = Label(input_field, image = img)
+    hourglass = tk.Label(input_field, image = img)
 
     # Introduction
     introduction = introduction_lastfm(behaviour, ask = (input_function == text_input))
-    display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
     intro = True
     username = "User"
 
@@ -138,7 +141,7 @@ if __name__ == "__main__":
         # Questions after the first one
 
         # Hourglass while waiting
-        hourglass.pack(side = "left", fill = Y, expand = None)
+        hourglass.pack(side = "left", fill = tk.Y, expand = None)
         window.update()
 
         X, y = get_X(experiment_data), get_y(experiment_data)
@@ -178,6 +181,7 @@ if __name__ == "__main__":
             for b in ending_buttons:
                 button_dict[b].pack(side = "left")
             window.update()
+            input_field.pack_forget()
 
             question = end_questions[0]
             if len(end_questions) > 0:
@@ -189,6 +193,7 @@ if __name__ == "__main__":
         global end_questions
         global end_answers
         global experiment
+        global input_field
 
         end_answers.append(input)
 
@@ -199,18 +204,29 @@ if __name__ == "__main__":
             time.sleep(3)
             window.destroy()
         else:
-            question = end_questions[0]
-            display(question, "", False, behaviour, messages)
-            del end_questions[0]
-            if len(end_questions) < 13:
+            if len(end_questions) < 14 and intro:
                 experiment = True
+                display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
+                for b in ending_buttons:
+                    button_dict[b].pack_forget()
+
+                print("=============")
+                input_field.pack(side=tk.BOTTOM, fill=tk.X)
+            else:
+                question = end_questions[0]
+                display(question, "", False, behaviour, messages)
+                del end_questions[0]
+
+
 
     def send_input(input):
         print(input)
 
         # Change the state allow to write on the read only window
         messages.configure(state='normal')
-        messages.insert(INSERT, '> %s\n' % input)
+        messages.insert(tk.INSERT, '> %s\n' % input)
+        messages.tag_add("start", "insert - 1l", "insert")
+        messages.tag_config("start", background="white", foreground="gray44")
         messages.configure(state='disabled')
 
         if experiment:
@@ -235,23 +251,32 @@ if __name__ == "__main__":
     taste_buttons = ["Rock", "Alternative", "Electronic", "Indie", "Dance", "Other"]
     # A loop doesn't work because the iterator will change and functions won't work
     button_dict = {
-        "Yes":Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),
-        "I don't have a preference":Button(window, text = "I don't have a preference", command = lambda: button("I don't have a preference"), width=20, height=2),
-        "No":Button(window, text = "No", command = lambda: button("No"), width=20, height=2),
-        "Completely Agree":Button(window, text = "Completely Agree", command = lambda: button("Completely Agree"), width=20, height=2),
-        "Somewhat Agree":Button(window, text =  "Somewhat Agree", command = lambda: button( "Somewhat Agree"), width=20, height=2),
-        "Neither Agree nor Disagree":Button(window, text = "Neither Agree nor Disagree", command = lambda: button("Neither Agree nor Disagree"), width=20, height=2),
-        "Somewhat Disagree":Button(window, text = "Somewhat Disagree", command = lambda: button("Somewhat Disagree"), width=20, height=2),
-        "Not at all":Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2),
-        "Rock":Button(window, text = "Rock", command = lambda: button("Rock"), width=20, height=2),
-        "Alternative":Button(window, text = "Alternative", command = lambda: button("Alternative"), width=20, height=2),
-        "Electronic":Button(window, text = "Electronic", command = lambda: button("Electronic"), width=20, height=2),
-        "Indie":Button(window, text = "Indie", command = lambda: button("Indie"), width=20, height=2),
-        "Dance":Button(window, text = "Dance", command = lambda: button("Dance"), width=20, height=2),
-        "Other":Button(window, text = "Other", command = lambda: button("Other"), width=20, height=2),
+        "Yes":tk.Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),
+        "I don't have a preference":tk.Button(window, text = "I don't have a preference", command = lambda: button("I don't have a preference"), width=20, height=2),
+        "No":tk.Button(window, text = "No", command = lambda: button("No"), width=20, height=2),
+        "Completely Agree":tk.Button(window, text = "Completely Agree", command = lambda: button("Completely Agree"), width=20, height=2),
+        "Somewhat Agree":tk.Button(window, text =  "Somewhat Agree", command = lambda: button( "Somewhat Agree"), width=20, height=2),
+        "Neither Agree nor Disagree":tk.Button(window, text = "Neither Agree nor Disagree", command = lambda: button("Neither Agree nor Disagree"), width=20, height=2),
+        "Somewhat Disagree":tk.Button(window, text = "Somewhat Disagree", command = lambda: button("Somewhat Disagree"), width=20, height=2),
+        "Not at all":tk.Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2),
+        "Rock":tk.Button(window, text = "Rock", command = lambda: button("Rock"), width=20, height=2),
+        "Alternative":tk.Button(window, text = "Alternative", command = lambda: button("Alternative"), width=20, height=2),
+        "Electronic":tk.Button(window, text = "Electronic", command = lambda: button("Electronic"), width=20, height=2),
+        "Indie":tk.Button(window, text = "Indie", command = lambda: button("Indie"), width=20, height=2),
+        "Dance":tk.Button(window, text = "Dance", command = lambda: button("Dance"), width=20, height=2),
+        "Other":tk.Button(window, text = "Other", command = lambda: button("Other"), width=20, height=2),
     }
 
-    frame = Frame(window)  # , width=300, height=300)
+    # Introduce the first sentence
+    question = end_questions[0]
+    display(question, "", False, behaviour, messages)
+    del end_questions[0]
+    for b in ending_buttons:
+        button_dict[b].pack(side = "left")
+
+
+
+    frame = tk.Frame(window)  # , width=300, height=300)
     input_field.bind("<Return>", Enter_pressed)
     frame.pack()
 

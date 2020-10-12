@@ -22,7 +22,7 @@ def display(sentence, filename, networking, behaviour, messages, question = -1, 
     print(sentence)
     # Change the state allow to write on the read only window
     messages.configure(state='normal')
-    messages.insert(INSERT, '%s\n' % sentence)
+    messages.insert(INSERT, '\n%s\n' % sentence)
     messages.configure(state='disabled')
     messages.see("end")
     if networking:
