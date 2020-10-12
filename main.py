@@ -33,7 +33,7 @@ if __name__ == "__main__":
     input_function = text_input
     question_function = question_from_v_musics
     behaviour = "WARM" # "WARM" or "COMP"
-    networking = False
+    networking = True
 
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     hourglass = tk.Label(input_field, image = img)
 
     # Introduction
-    introduction = introduction_lastfm(behaviour, ask = (input_function == text_input))
+    introduction = introduction_lastfm(behaviour)
     intro = True
     username = "User"
 
@@ -170,7 +170,7 @@ if __name__ == "__main__":
         if finish:
             # FINISH
             recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
-            display(recommendations, "recommendations.xml", networking, behaviour, messages)
+            display(recommendations, "recommendations.xml", networking, behaviour, messages, variable = "recommendations")
             clean_directory('output')
             save({"recommendation":recommendations, "username":username, "behaviour":behaviour, "question_amount":question_amount}, "result")
 
@@ -204,13 +204,17 @@ if __name__ == "__main__":
             time.sleep(3)
             window.destroy()
         else:
+            if len(end_questions) < 15 and intro:
+                for b in ending_buttons:
+                    button_dict[b].pack_forget()
+                for b in start_buttons:
+                    button_dict[b].pack(side = "left")
             if len(end_questions) < 14 and intro:
                 experiment = True
                 display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
-                for b in ending_buttons:
+                for b in start_buttons:
                     button_dict[b].pack_forget()
 
-                print("=============")
                 input_field.pack(side=tk.BOTTOM, fill=tk.X)
             else:
                 question = end_questions[0]
@@ -248,7 +252,7 @@ if __name__ == "__main__":
     initial_buttons = ["Yes", "I don't have a preference", "No"]
     ending_buttons = ["Not at all", "Somewhat Disagree", "Neither Agree nor Disagree", "Somewhat Agree", "Completely Agree"]
     # Most popular : rock, pop, alternative, electronic, indie, female vocalist, 80s, dance, alternative rock, classic rock, british, indie rock, singer-songwritter, hard rock, experimental, metal
-    taste_buttons = ["Rock", "Alternative", "Electronic", "Indie", "Dance", "Other"]
+    start_buttons = ["Start"]
     # A loop doesn't work because the iterator will change and functions won't work
     button_dict = {
         "Yes":tk.Button(window, text = "Yes", command = lambda: button("Yes"), width=20, height=2),
@@ -259,12 +263,7 @@ if __name__ == "__main__":
         "Neither Agree nor Disagree":tk.Button(window, text = "Neither Agree nor Disagree", command = lambda: button("Neither Agree nor Disagree"), width=20, height=2),
         "Somewhat Disagree":tk.Button(window, text = "Somewhat Disagree", command = lambda: button("Somewhat Disagree"), width=20, height=2),
         "Not at all":tk.Button(window, text = "Not at all", command = lambda: button("Not at all"), width=20, height=2),
-        "Rock":tk.Button(window, text = "Rock", command = lambda: button("Rock"), width=20, height=2),
-        "Alternative":tk.Button(window, text = "Alternative", command = lambda: button("Alternative"), width=20, height=2),
-        "Electronic":tk.Button(window, text = "Electronic", command = lambda: button("Electronic"), width=20, height=2),
-        "Indie":tk.Button(window, text = "Indie", command = lambda: button("Indie"), width=20, height=2),
-        "Dance":tk.Button(window, text = "Dance", command = lambda: button("Dance"), width=20, height=2),
-        "Other":tk.Button(window, text = "Other", command = lambda: button("Other"), width=20, height=2),
+        "Start":tk.Button(window, text = "Start", command = lambda: button("Start"), width=20, height=2),
     }
 
     # Introduce the first sentence

@@ -36,18 +36,12 @@ project
 
 TODO List :
 - Comment code
-- Fix low amount of tag assignment
 - Create body behavior
   - Add rest pose
-  - Increase gesture pool
 - Catch the end of Greta sentences
-- Create a better interface
-  - Introduce the purpose of the experiment
-  - Add button choice
 - Fix architecture
 - Gather results
 - Fix start with competence mode
-- Fix display at the end
 
 - Internship report :
 - Graphs :
@@ -63,9 +57,8 @@ FOR THIS WEEK :
 - Do research and add knowledge on rest pose
 - Refactor the beginning of the report
 - Add references to the recommendation system part
-- Change introduction of the experiment to ask questions about recent music
-- Create the tree for computation speed
 - Have the software working at home
+- Fix the display of the username and the results
 
 
 

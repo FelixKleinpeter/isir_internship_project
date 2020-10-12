@@ -3,29 +3,29 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>Hello,
-<tm id="tm1"/>user,
-<tm
-                id="tm2"/>my
-<tm id="tm3"/>name
-<tm id="tm4"/>is
-<tm
-                id="tm5"/>Alice.
-<tm id="tm6"/>Please
-<tm
-                id="tm7"/>press
-<tm id="tm8"/>this
-<tm
-                id="tm9"/>Start
-<tm id="tm10"/>button
-<tm
-                id="tm11"/>when
-<tm id="tm12"/>you
-<tm
-                id="tm13"/>are
-<tm id="tm14"/>ready.
-<tm id="tm15"/>
-            <tm id="tm15"/>
+            <tm id="tm0"/>At
+            <tm id="tm1"/>this
+            <tm id="tm2"/>state
+            <tm id="tm3"/>of
+            <tm id="tm4"/>the
+            <tm id="tm5"/>process,
+            <tm id="tm6"/>we
+            <tm id="tm7"/>are
+            <tm id="tm8"/>concerned
+            <tm id="tm9"/>with
+            <tm id="tm10"/>your
+            <tm id="tm11"/>taste
+            <tm id="tm12"/>for
+            <tm id="tm13"/>
+*
+            <tm id="tm14"/>music.
+            <tm id="tm15"/>Do
+            <tm id="tm16"/>you
+            <tm id="tm17"/>often
+            <tm id="tm18"/>listen
+            <tm id="tm19"/>to
+            <tm id="tm20"/>it?
+            <tm id="tm20"/>
             <pitchaccent end="s1:tm1" id="xpa0" importance="1"
                 level="strong" start="s1:tm0" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa1" importance="1"
@@ -58,13 +58,27 @@
                 level="strong" start="s1:tm14" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa15" importance="1"
                 level="strong" start="s1:tm15" type="Hstar"/>
+            <pitchaccent end="s1:tm1" id="xpa16" importance="1"
+                level="strong" start="s1:tm16" type="Hstar"/>
+            <pitchaccent end="s1:tm1" id="xpa17" importance="1"
+                level="strong" start="s1:tm17" type="Hstar"/>
+            <pitchaccent end="s1:tm1" id="xpa18" importance="1"
+                level="strong" start="s1:tm18" type="Hstar"/>
+            <pitchaccent end="s1:tm1" id="xpa19" importance="1"
+                level="strong" start="s1:tm19" type="Hstar"/>
+            <pitchaccent end="s1:tm1" id="xpa20" importance="1"
+                level="strong" start="s1:tm20" type="Hstar"/>
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm9-0.2" id="id_1" importance="1.0"
-            main="im_5" start="s1:tm0-0.2"/>
-        <imageschema POSroot="noun" end="s1:tm18-0.2" id="im_5"
-            importance="1.0" indexword="5" previous="true"
-            start="s1:tm11-0.2" type="whole"/>
+        <ideationalunit end="s1:tm16-0.2" id="id_0" importance="1.0"
+            main="im_4" start="s1:tm0-0.2"/>
+        <imageschema POSroot="noun" end="s1:tm14-0.2" id="im_4"
+            importance="1.0" indexword="13" previous="true"
+            start="s1:tm11-0.2" type="object"/>
+        <imageschema POSroot="noun" end="s1:tm15-0.2" id="im_5"
+            importance="1.0" indexword="16" start="s1:tm14-0.2" type="object"/>
+        <imageschema POSroot="noun" end="s1:tm16-0.2" id="im_6"
+            importance="1.0" indexword="16" start="s1:tm15-0.2" type="object"/>
     </fml>
 </fml-apml>

@@ -8,7 +8,7 @@ def fml_from_template(variable, filename, behaviour, question):
     if question == -1:
         file_to_open = behaviour.lower()+"/"+filename
     else:
-        file_to_open = behaviour.lower()+"/q"+str(question)+".xml"
+        file_to_open = behaviour.lower()+"/q"+str(question+1)+".xml"
     with open("behaviour/templates/"+file_to_open,"r") as f:
         lines = f.readlines()
 

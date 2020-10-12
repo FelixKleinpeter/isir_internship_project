@@ -1,0 +1,20 @@
+<bml>
+<speech id="s1" language="english" start="0.0" text="" type="SAPI4" voice="marytts" xmlns="">
+<description level="1" type="gretabml"><reference>tmp/from-fml-apml.pho</reference></description>
+
+<tm id="tm0"/>Well,
+<tm id="tm1"/>what
+<tm id="tm2"/>about
+<tm id="tm3"/>
+*
+<tm id="tm4"/>music
+<tm id="tm5"/>then?
+<tm id="tm5"/>
+<pitchaccent id='xpa0' type='Hstar' start='s1:tm0' end='s1:tm1' level='strong' importance='1'/>
+<pitchaccent id='xpa1' type='Hstar' start='s1:tm1' end='s1:tm1' level='strong' importance='1'/>
+<pitchaccent id='xpa2' type='Hstar' start='s1:tm2' end='s1:tm1' level='strong' importance='1'/>
+<pitchaccent id='xpa3' type='Hstar' start='s1:tm3' end='s1:tm1' level='strong' importance='1'/>
+<pitchaccent id='xpa4' type='Hstar' start='s1:tm4' end='s1:tm1' level='strong' importance='1'/>
+<pitchaccent id='xpa5' type='Hstar' start='s1:tm5' end='s1:tm1' level='strong' importance='1'/>
+</speech>
+</bml>

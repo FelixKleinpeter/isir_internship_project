@@ -3,20 +3,17 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>We
-<tm id="tm1"/>are
-<tm id="tm2"/>interested
-<tm id="tm3"/>in
-<tm id="tm4"/>knowing
-<tm id="tm5"/>if
-<tm id="tm6"/>you
-<tm id="tm7"/>often
-<tm id="tm8"/>listen
-<tm id="tm9"/>to
-<tm id="tm10"/>
-*
-<tm id="tm11"/>music.
-<tm id="tm11"/>
+            <tm id="tm0"/>Nice
+            <tm id="tm1"/>to
+            <tm id="tm2"/>meet
+            <tm id="tm3"/>you!
+            <tm id="tm4"/>I'm
+            <tm id="tm5"/>Alice,
+            <tm id="tm6"/>what
+            <tm id="tm7"/>is
+            <tm id="tm8"/>your
+            <tm id="tm9"/>name?
+            <tm id="tm9"/>
             <pitchaccent end="s1:tm1" id="xpa0" importance="1"
                 level="strong" start="s1:tm0" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa1" importance="1"
@@ -37,18 +34,17 @@
                 level="strong" start="s1:tm8" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa9" importance="1"
                 level="strong" start="s1:tm9" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa10" importance="1"
-                level="strong" start="s1:tm10" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa11" importance="1"
-                level="strong" start="s1:tm11" type="Hstar"/>
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm12-0.2" id="id_0" importance="1.0"
-            main="im_3" start="s1:tm0-0.2"/>
-        <imageschema POSroot="adverb" end="s1:tm11-0.2" id="im_3"
-            importance="1.0" previous="true" start="s1:tm3-0.2" type="in"/>
-        <imageschema POSroot="noun" end="s1:tm12-0.2" id="im_4"
-            importance="1.0" start="s1:tm11-0.2" type="object"/>
+        <ideationalunit end="s1:tm4-0.2" id="id_0" importance="1.0"
+            main="im_1" start="s1:tm0-0.2"/>
+        <imageschema POSroot="verb" end="s1:tm4-0.2" id="im_1"
+            importance="1.0" indexword="3" previous="true"
+            start="s1:tm1-0.2" type="merging"/>
+        <ideationalunit end="s1:tm8-0.2" id="id_1" importance="1.0"
+            main="im_7" start="s1:tm0-0.2"/>
+        <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_7"
+            importance="1.0" indexword="8" start="s1:tm11-0.2" type="link"/>
     </fml>
 </fml-apml>

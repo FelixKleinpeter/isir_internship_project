@@ -5,7 +5,7 @@ def behaviour_lastfm(behaviour, username):
     if behaviour == "WARM":
         questions.append("Let's start, " + username + "! What do you think about * music? Do you like it?")
         questions.append("Then, do you enjoy listening to * music?")
-        questions.append("Mmmmh, what about * music then?")
+        questions.append("Well, what about * music then?")
         questions.append("And about * music?")
         questions.append("Then, maybe you like to listen to * music?")
         questions.append("I think I'm close to find new artists for you! Tell me, "+username+", do you like * music?")
@@ -21,15 +21,9 @@ def behaviour_lastfm(behaviour, username):
         questions.append("We are reaching the end of the experiment. Do you like * music?")
     return questions
 
-def introduction_lastfm(behaviour, ask = False):
+def introduction_lastfm(behaviour):
     if behaviour == "WARM":
-        s = "Nice to meet you! I would like to ask you some questions about your music taste to find new artists to recommend. After each of your answers, I will try to find the best question to find what to recommend to you as fast as possible! We have a lot of artists, all of them are quite recent. "
-        if ask :
-            s += "I'm Alice, what is your name?"
-        return s
+        return "Nice to meet you! I'm Alice, what is your name?"
     elif behaviour == "COMP":
-        s = "Hello, user, my name is Alice. Our purpose is to ask questions about music tastes to recommend new artists. After each answer, we find the next question to ask to reduce the total amount of questions. All the artists are from the last century. "
-        if ask :
-            s += "Are you ready to start?"
-        return s
+        return "Hello, user, my name is Alice. Please press the Start button when you are ready. "
     return ""
