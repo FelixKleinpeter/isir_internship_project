@@ -32,11 +32,13 @@
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm9-0.2" id="id_0" importance="1.0"
+        <!--<ideationalunit end="s1:tm9-0.2" id="id_0" importance="1.0"
             main="im_5" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm8-0.2" id="im_5"
             importance="1.0" indexword="9" start="s1:tm7-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm9-0.2" id="im_6"
-            importance="1.0" indexword="9" start="s1:tm8-0.2" type="object"/>
+            importance="1.0" indexword="9" start="s1:tm8-0.2" type="object"/>-->
+        <beat id="b1" type="right" start="s1:tm5" end="s1:tm7" importance="1.0"/>
+        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm4+3" importance="1.0"/>
     </fml>
 </fml-apml>

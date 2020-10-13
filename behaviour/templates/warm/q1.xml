@@ -52,7 +52,7 @@ USERNAME
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm5-0.2" id="id_0" importance="1.0"
+        <!--<ideationalunit end="s1:tm5-0.2" id="id_0" importance="1.0"
             main="im_2" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm4-0.2" id="im_2"
             importance="1.0" indexword="5" start="s1:tm1-0.2" type="whole"/>
@@ -64,5 +64,11 @@ USERNAME
             importance="1.0" indexword="7" start="s1:tm11-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_8"
             importance="1.0" indexword="7" start="s1:tm12-0.2" type="object"/>
+            <rest id="rp1" type="JointHandsFront" start="s1:tm2" end="s1:tm10" importance="1.0"/>
+            <performative id="p1" type="rythm" start="s1:tm10" end="s1:tm12" importance="1.0"/>
+            <rest id="rp1" type="JointHandsFront" start="s1:tm13" end="1" importance="1.0"/>-->
+        <beat id="b1" type="left" start="s1:tm0" end="s1:tm2" importance="1.0"/>
+        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm9+3" importance="1.0"/>
+
     </fml>
 </fml-apml>

@@ -13,6 +13,7 @@ from utils.generator.question import question_from_v_musics, question_end_experi
 from utils.output_displayer import lastfm_output_displayer
 from utils.functions import clean_directory, display, save
 from utils.file_reader import read_lastfm
+from utils.network.file_sender import send_to_greta
 
 from precomputation.lastfm import first_variable_precomputation
 from behaviour.behaviour import behaviour_lastfm, introduction_lastfm
@@ -32,7 +33,7 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "WARM" # "WARM" or "COMP"
+    behaviour = "COMP" # "WARM" or "COMP"
     networking = True
 
     # Loading or computing the first variables / variables tree
@@ -45,7 +46,6 @@ if __name__ == "__main__":
     yes = yes_answers()
     no = no_answers()
     idk = idk_answers()
-
 
     # Creating databases
     experiment_data = df.copy()
@@ -210,8 +210,6 @@ if __name__ == "__main__":
 
         end_answers.append(input)
 
-
-
         if len(end_questions) == 0:
             save({"final_questions":question_end_experiment(), "end_answers":end_answers}, "answers")
             display("Thank you!", "", False, False, messages)
@@ -234,6 +232,9 @@ if __name__ == "__main__":
                         button_dict[b].pack_forget()
                     input_field.pack(side=tk.BOTTOM, fill=tk.X)
                     start_button_on = False
+                    send_to_greta("behaviour/templates/hands_front.xml")
+                else:
+                    send_to_greta("behaviour/templates/Restpose.xml")
             else:
                 question = end_questions[0]
                 display(question, "", False, behaviour, messages)

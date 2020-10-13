@@ -55,10 +55,12 @@
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm9-0.2" id="id_1" importance="1.0"
+        <!--<ideationalunit end="s1:tm9-0.2" id="id_1" importance="1.0"
             main="im_5" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm18-0.2" id="im_5"
             importance="1.0" indexword="5" previous="true"
-            start="s1:tm11-0.2" type="whole"/>
+            start="s1:tm11-0.2" type="whole"/>-->
+            <deictic id="d1" type="selftouch" start="s1:tm2" end="s1:tm5" importance="1.0"/>
+            <performative id="p1" type="rythm" start="s1:tm6" end="s1:tm12" importance="1.0"/>
     </fml>
 </fml-apml>

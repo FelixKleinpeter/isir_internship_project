@@ -33,5 +33,6 @@
         <imageschema POSroot="noun" end="s1:tm7-0.2" id="im_5"
             importance="1.0" indexword="6" previous="true"
             start="s1:tm5-0.2" type="object"/>
+        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm3+3" importance="1.0"/>
     </fml>
 </fml-apml>

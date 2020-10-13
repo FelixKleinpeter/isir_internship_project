@@ -43,6 +43,9 @@ TODO List :
 - Gather results
 - Fix start with competence mode
 
+- Clean bad unicode in artists names
+- Randomize last parts
+
 - Internship report :
 - Graphs :
   - LASTFM tag assignment

@@ -44,11 +44,12 @@
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm13-0.2" id="id_0" importance="1.0"
+        <!--<ideationalunit end="s1:tm13-0.2" id="id_0" importance="1.0"
             main="im_7" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm12-0.2" id="im_7"
             importance="1.0" indexword="13" start="s1:tm11-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_8"
-            importance="1.0" indexword="13" start="s1:tm12-0.2" type="object"/>
+            importance="1.0" indexword="13" start="s1:tm12-0.2" type="object"/>-->
+        <deictic id="d1" type="selftouch" start="s1:tm2" end="s1:tm7" importance="1.0"/>
     </fml>
 </fml-apml>

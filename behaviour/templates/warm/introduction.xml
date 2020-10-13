@@ -37,7 +37,7 @@
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm4-0.2" id="id_0" importance="1.0"
+        <!--ideationalunit end="s1:tm4-0.2" id="id_0" importance="1.0"
             main="im_1" start="s1:tm0-0.2"/>
         <imageschema POSroot="verb" end="s1:tm4-0.2" id="im_1"
             importance="1.0" indexword="3" previous="true"
@@ -45,7 +45,8 @@
         <ideationalunit end="s1:tm8-0.2" id="id_1" importance="1.0"
             main="im_7" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_7"
-            importance="1.0" indexword="8" start="s1:tm11-0.2" type="link"/>
-        <emotion id="e1" type="joyStrong" start="s1:tm1" end="1" importance="1.0"/>
+            importance="1.0" indexword="8" start="s1:tm11-0.2" type="link"/>-->
+        <performative id="p1" type="rythm" start="s1:tm4" end="s1:tm6" importance="1.0"/>
+        <emotion id="e1" type="small_joy" start="s1:tm1" end="s1:tm7+10" importance="1.0"/>
     </fml>
 </fml-apml>

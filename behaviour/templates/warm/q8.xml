@@ -29,5 +29,6 @@
             importance="1.0" indexword="5" start="s1:tm3-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm5-0.2" id="im_4"
             importance="1.0" indexword="5" start="s1:tm4-0.2" type="object"/>
+        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm2+3" importance="1.0"/>
     </fml>
 </fml-apml>
