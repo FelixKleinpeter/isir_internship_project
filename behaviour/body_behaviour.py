@@ -3,8 +3,6 @@
 def fml_from_template(variable, filename, behaviour, question, username = ""):
     output_string = """"""
 
-    print(question)
-
     if question == -1:
         file_to_open = behaviour.lower()+"/"+filename
     elif question >= 9:

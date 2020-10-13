@@ -124,7 +124,6 @@ if __name__ == "__main__":
             question_amount += 1
 
             if start_button_on and behaviour == "COMP":
-                print("Z")
                 for b in initial_buttons:
                     button_dict[b].pack_forget()
                 for b in start_buttons:
@@ -229,7 +228,6 @@ if __name__ == "__main__":
                 experiment = True
                 display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
 
-                print("Y")
                 start_button_on = True
                 if behaviour == "WARM":
                     for b in start_buttons:
@@ -240,10 +238,6 @@ if __name__ == "__main__":
                 question = end_questions[0]
                 display(question, "", False, behaviour, messages)
                 del end_questions[0]
-
-
-
-
 
     def send_input(input):
         print(input)
