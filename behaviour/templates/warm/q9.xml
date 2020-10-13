@@ -3,14 +3,13 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>Well,
-            <tm id="tm1"/>what
-            <tm id="tm2"/>about
+            <tm id="tm0"/>Do
+            <tm id="tm1"/>you
+            <tm id="tm2"/>like
             <tm id="tm3"/>
 *
-            <tm id="tm4"/>music
-            <tm id="tm5"/>then?
-            <tm id="tm5"/>
+            <tm id="tm4"/>music?
+            <tm id="tm4"/>
             <pitchaccent end="s1:tm1" id="xpa0" importance="1"
                 level="strong" start="s1:tm0" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa1" importance="1"
@@ -21,17 +20,14 @@
                 level="strong" start="s1:tm3" type="Hstar"/>
             <pitchaccent end="s1:tm1" id="xpa4" importance="1"
                 level="strong" start="s1:tm4" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa5" importance="1"
-                level="strong" start="s1:tm5" type="Hstar"/>
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm7-0.2" id="id_0" importance="1.0"
-            main="im_4" start="s1:tm0-0.2"/>
+        <ideationalunit end="s1:tm5-0.2" id="id_0" importance="1.0"
+            main="im_3" start="s1:tm0-0.2"/>
+        <imageschema POSroot="noun" end="s1:tm4-0.2" id="im_3"
+            importance="1.0" indexword="5" start="s1:tm3-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm5-0.2" id="im_4"
-            importance="1.0" indexword="6" start="s1:tm4-0.2" type="object"/>
-        <imageschema POSroot="noun" end="s1:tm7-0.2" id="im_5"
-            importance="1.0" indexword="6" previous="true"
-            start="s1:tm5-0.2" type="object"/>
+            importance="1.0" indexword="5" start="s1:tm4-0.2" type="object"/>
     </fml>
 </fml-apml>

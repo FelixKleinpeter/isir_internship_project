@@ -76,6 +76,7 @@ if __name__ == "__main__":
     # Introduction
     introduction = introduction_lastfm(behaviour)
     intro = True
+    start_button_on = False
     username = "User"
 
     # First question use already computed variables
@@ -98,6 +99,7 @@ if __name__ == "__main__":
         global experiment
         global questions
         global v
+        global start_button_on
 
         finish = False
 
@@ -118,8 +120,19 @@ if __name__ == "__main__":
             if len(questions) > 0:
                 del questions[0]
 
-            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]))
+            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]), username)
             question_amount += 1
+
+            if start_button_on and behaviour == "COMP":
+                print("Z")
+                for b in initial_buttons:
+                    button_dict[b].pack_forget()
+                for b in start_buttons:
+                    button_dict[b].pack_forget()
+                input_field.pack(side=tk.BOTTOM, fill=tk.X)
+                for b in initial_buttons:
+                    button_dict[b].pack(side = "left")
+                start_button_on = False
 
             return "break"
 
@@ -153,11 +166,11 @@ if __name__ == "__main__":
         hourglass.pack_forget()
 
         # First end condition : there is no more item in the database, the remaning from the previous questions are recommended
-        if experiment_data["item"].size == 0 or experiment_data.item.unique().size <= 8 or len(get_X(experiment_data).columns) <= 1:
+        if experiment_data["item"].size <= 3 or experiment_data.item.unique().size <= 10 or len(get_X(experiment_data).columns) <= 1:
             user_preferences = experiment_data
             finish = True
         else:
-            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]))
+            display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]), username)
 
             # len_question = len(question.split(' '))
             # time.sleep(len_question / 2)
@@ -170,7 +183,7 @@ if __name__ == "__main__":
         if finish:
             # FINISH
             recommendations = lastfm_output_displayer(user_preferences, artists, behaviour)
-            display(recommendations, "recommendations.xml", networking, behaviour, messages, variable = "recommendations")
+            display(recommendations, "recommendations.xml", networking, behaviour, messages, variable = "")
             clean_directory('output')
             save({"recommendation":recommendations, "username":username, "behaviour":behaviour, "question_amount":question_amount}, "result")
 
@@ -194,12 +207,15 @@ if __name__ == "__main__":
         global end_answers
         global experiment
         global input_field
+        global start_button_on
 
         end_answers.append(input)
 
+
+
         if len(end_questions) == 0:
             save({"final_questions":question_end_experiment(), "end_answers":end_answers}, "answers")
-            display("Thank you!", "", networking, False, messages)
+            display("Thank you!", "", False, False, messages)
             window.update()
             time.sleep(3)
             window.destroy()
@@ -212,14 +228,20 @@ if __name__ == "__main__":
             if len(end_questions) < 14 and intro:
                 experiment = True
                 display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
-                for b in start_buttons:
-                    button_dict[b].pack_forget()
 
-                input_field.pack(side=tk.BOTTOM, fill=tk.X)
+                print("Y")
+                start_button_on = True
+                if behaviour == "WARM":
+                    for b in start_buttons:
+                        button_dict[b].pack_forget()
+                    input_field.pack(side=tk.BOTTOM, fill=tk.X)
+                    start_button_on = False
             else:
                 question = end_questions[0]
                 display(question, "", False, behaviour, messages)
                 del end_questions[0]
+
+
 
 
 

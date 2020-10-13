@@ -18,7 +18,7 @@ def clean_directory(folder):
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-def display(sentence, filename, networking, behaviour, messages, question = -1, variable = ""):
+def display(sentence, filename, networking, behaviour, messages, question = -1, variable = "", username = ""):
     print(sentence)
     # Change the state allow to write on the read only window
     messages.configure(state='normal')
@@ -30,9 +30,9 @@ def display(sentence, filename, networking, behaviour, messages, question = -1, 
             xml_from_question(sentence, filename, behaviour)
         else:
             if question != -1:
-                fml_from_template(variable, filename, behaviour, question)
+                fml_from_template(variable, filename, behaviour, question, username)
             else:
-                fml_from_template(variable, filename, behaviour, question)
+                fml_from_template(variable, filename, behaviour, question, username)
         send_to_greta("output/" + filename)
 
 def save(dictionnary, name):

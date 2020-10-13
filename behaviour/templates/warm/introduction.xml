@@ -46,5 +46,6 @@
             main="im_7" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_7"
             importance="1.0" indexword="8" start="s1:tm11-0.2" type="link"/>
+        <emotion id="e1" type="joyStrong" start="s1:tm1" end="1" importance="1.0"/>
     </fml>
 </fml-apml>
