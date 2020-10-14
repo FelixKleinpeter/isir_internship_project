@@ -26,48 +26,12 @@
             <tm id="tm19"/>to
             <tm id="tm20"/>it?
             <tm id="tm20"/>
-            <pitchaccent end="s1:tm1" id="xpa0" importance="1"
-                level="strong" start="s1:tm0" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa1" importance="1"
-                level="strong" start="s1:tm1" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa2" importance="1"
-                level="strong" start="s1:tm2" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa3" importance="1"
-                level="strong" start="s1:tm3" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa4" importance="1"
-                level="strong" start="s1:tm4" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa5" importance="1"
+            <pitchaccent end="s1:tm6" id="xpa0" importance="1"
                 level="strong" start="s1:tm5" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa6" importance="1"
-                level="strong" start="s1:tm6" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa7" importance="1"
-                level="strong" start="s1:tm7" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa8" importance="1"
-                level="strong" start="s1:tm8" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa9" importance="1"
-                level="strong" start="s1:tm9" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa10" importance="1"
-                level="strong" start="s1:tm10" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa11" importance="1"
-                level="strong" start="s1:tm11" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa12" importance="1"
-                level="strong" start="s1:tm12" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa13" importance="1"
+            <pitchaccent end="s1:tm14" id="xpa20" importance="1"
                 level="strong" start="s1:tm13" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa14" importance="1"
-                level="strong" start="s1:tm14" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa15" importance="1"
-                level="strong" start="s1:tm15" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa16" importance="1"
-                level="strong" start="s1:tm16" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa17" importance="1"
-                level="strong" start="s1:tm17" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa18" importance="1"
+            <pitchaccent end="s1:tm19" id="xpa20" importance="1"
                 level="strong" start="s1:tm18" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa19" importance="1"
-                level="strong" start="s1:tm19" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa20" importance="1"
-                level="strong" start="s1:tm20" type="Hstar"/>
         </speech>
     </bml>
     <fml>

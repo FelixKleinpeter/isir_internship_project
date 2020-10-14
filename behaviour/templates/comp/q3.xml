@@ -8,12 +8,8 @@
 *
             <tm id="tm2"/>music?
             <tm id="tm2"/>
-            <pitchaccent end="s1:tm1" id="xpa0" importance="1"
-                level="strong" start="s1:tm0" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa1" importance="1"
+            <pitchaccent end="s1:tm2" id="xpa2" importance="1"
                 level="strong" start="s1:tm1" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa2" importance="1"
-                level="strong" start="s1:tm2" type="Hstar"/>
         </speech>
     </bml>
     <fml>

@@ -25,42 +25,12 @@ USERNAME
 *
             <tm id="tm17"/>music?
             <tm id="tm17"/>
-            <pitchaccent end="s1:tm1" id="xpa0" importance="1"
-                level="strong" start="s1:tm0" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa1" importance="1"
+            <pitchaccent end="s1:tm2" id="xpa0" importance="1"
                 level="strong" start="s1:tm1" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa2" importance="1"
-                level="strong" start="s1:tm2" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa3" importance="1"
-                level="strong" start="s1:tm3" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa4" importance="1"
-                level="strong" start="s1:tm4" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa5" importance="1"
-                level="strong" start="s1:tm5" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa6" importance="1"
+            <pitchaccent end="s1:tm8" id="xpa1" importance="1"
                 level="strong" start="s1:tm6" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa7" importance="1"
-                level="strong" start="s1:tm7" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa8" importance="1"
-                level="strong" start="s1:tm8" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa9" importance="1"
-                level="strong" start="s1:tm9" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa10" importance="1"
-                level="strong" start="s1:tm10" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa11" importance="1"
-                level="strong" start="s1:tm11" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa12" importance="1"
-                level="strong" start="s1:tm12" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa13" importance="1"
-                level="strong" start="s1:tm13" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa14" importance="1"
-                level="strong" start="s1:tm14" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa15" importance="1"
-                level="strong" start="s1:tm15" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa16" importance="1"
+            <pitchaccent end="s1:tm17" id="xpa2" importance="1"
                 level="strong" start="s1:tm16" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa17" importance="1"
-                level="strong" start="s1:tm17" type="Hstar"/>
         </speech>
     </bml>
     <fml>
@@ -75,7 +45,8 @@ USERNAME
             importance="1.0" start="s1:tm15-0.2" type="whole"/>
         <imageschema POSroot="noun" end="s1:tm22-0.2" id="im_14"
             importance="1.0" indexword="10" start="s1:tm20-0.2" type="object"/>-->
-        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm15+3" importance="1.0"/>
+        <emotion id="e1" type="small_joy" start="s1:tm13" end="s1:tm15+3" importance="1.0"/>
+        <emotion id="e2" type="joyStrong" start="s1:tm0" end="s1:tm13" importance="1.0"/>
         <deictic id="d1" type="selftouch" start="s1:tm0" end="s1:tm6" importance="1.0"/>
         <beat id="b1" type="right" start="s1:tm8" end="s1:tm14" importance="1.0"/>
         <backchannel id="b2" type="agreement" start="s1:tm5" end="s1:tm12" importance="1.0"/>

@@ -10,16 +10,8 @@
 *
             <tm id="tm4"/>music?
             <tm id="tm4"/>
-            <pitchaccent end="s1:tm1" id="xpa0" importance="1"
-                level="strong" start="s1:tm0" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa1" importance="1"
-                level="strong" start="s1:tm1" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa2" importance="1"
-                level="strong" start="s1:tm2" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa3" importance="1"
+            <pitchaccent end="s1:tm4" id="xpa0" importance="1"
                 level="strong" start="s1:tm3" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa4" importance="1"
-                level="strong" start="s1:tm4" type="Hstar"/>
         </speech>
     </bml>
     <fml>

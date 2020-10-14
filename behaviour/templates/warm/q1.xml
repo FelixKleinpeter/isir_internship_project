@@ -21,34 +21,12 @@ USERNAME
             <tm id="tm12"/>like
             <tm id="tm13"/>it?
             <tm id="tm13"/>
-            <pitchaccent end="s1:tm1" id="xpa0" importance="1"
-                level="strong" start="s1:tm0" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa1" importance="1"
+            <pitchaccent end="s1:tm2" id="xpa0" importance="1"
                 level="strong" start="s1:tm1" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa2" importance="1"
-                level="strong" start="s1:tm2" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa3" importance="1"
-                level="strong" start="s1:tm3" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa4" importance="1"
-                level="strong" start="s1:tm4" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa5" importance="1"
-                level="strong" start="s1:tm5" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa6" importance="1"
+            <pitchaccent end="s1:tm7" id="xpa1" importance="1"
                 level="strong" start="s1:tm6" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa7" importance="1"
-                level="strong" start="s1:tm7" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa8" importance="1"
-                level="strong" start="s1:tm8" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa9" importance="1"
-                level="strong" start="s1:tm9" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa10" importance="1"
-                level="strong" start="s1:tm10" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa11" importance="1"
-                level="strong" start="s1:tm11" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa12" importance="1"
+            <pitchaccent end="s1:tm13" id="xpa2" importance="1"
                 level="strong" start="s1:tm12" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa13" importance="1"
-                level="strong" start="s1:tm13" type="Hstar"/>
         </speech>
     </bml>
     <fml>
@@ -68,8 +46,10 @@ USERNAME
             <performative id="p1" type="rythm" start="s1:tm10" end="s1:tm12" importance="1.0"/>
             <rest id="rp1" type="JointHandsFront" start="s1:tm13" end="1" importance="1.0"/>-->
         <beat id="b1" type="left" start="s1:tm0" end="s1:tm3" importance="1.0"/>
-        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm12+3" importance="1.0"/>
-        <deictic id="d1" type="suggest" start="s1:tm7" end="s1:tm12" importance="1.0"/>
+        <emotion id="e1" type="joyStrong" start="s1:tm0" end="s1:tm7" importance="1.0"/>
+        <emotion id="e2" type="small_joy" start="s1:tm7" end="s1:tm12+3" importance="1.0"/>
+        <beat id="b2" type="left" start="s1:tm11" end="s1:tm13" importance="1.0"/>
         <performative id="p1" type="trigger-head_nod" start="s1:tm2" end="s1:tm8" importance="1.0"/>
+        <rest id="rp1" type="JointHandsFront" start="s1:tm13" end="1" importance="1.0"/>
     </fml>
 </fml-apml>

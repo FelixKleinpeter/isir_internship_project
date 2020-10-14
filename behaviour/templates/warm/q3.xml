@@ -11,18 +11,8 @@
             <tm id="tm4"/>music
             <tm id="tm5"/>then?
             <tm id="tm5"/>
-            <pitchaccent end="s1:tm1" id="xpa0" importance="1"
-                level="strong" start="s1:tm0" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa1" importance="1"
-                level="strong" start="s1:tm1" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa2" importance="1"
+            <pitchaccent end="s1:tm3" id="xpa0" importance="1"
                 level="strong" start="s1:tm2" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa3" importance="1"
-                level="strong" start="s1:tm3" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa4" importance="1"
-                level="strong" start="s1:tm4" type="Hstar"/>
-            <pitchaccent end="s1:tm1" id="xpa5" importance="1"
-                level="strong" start="s1:tm5" type="Hstar"/>
         </speech>
     </bml>
     <fml>
@@ -33,7 +23,8 @@
         <imageschema POSroot="noun" end="s1:tm7-0.2" id="im_5"
             importance="1.0" indexword="6" previous="true"
             start="s1:tm5-0.2" type="object"/>-->
-        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm3+3" importance="1.0"/>
+        <emotion id="e1" type="small_joy" start="s1:tm3" end="s1:tm4+3" importance="1.0"/>
+        <emotion id="e2" type="joyStrong" start="s1:tm0" end="s1:tm3" importance="1.0"/>
         <deictic id="d1" type="selftouch" start="s1:tm0" end="s1:tm5" importance="1.0"/>
         <performative id="p1" type="trigger-head_nod" start="s1:tm1" end="s1:tm5" importance="1.0"/>
     </fml>
