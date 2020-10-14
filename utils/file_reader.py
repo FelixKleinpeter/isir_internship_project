@@ -13,7 +13,6 @@ def read_lastfm(directory):
     if d[-1] != "/":
         d += "/"
 
-    artists = pd.read_csv(d + "artists.dat", sep="\t", usecols=['id', 'name', 'url', 'pictureURL'])
     with open(d + "tags.dat") as f:
         lines = f.readlines()
         ids = []
@@ -23,19 +22,18 @@ def read_lastfm(directory):
             values.append(line.strip().split("\t")[1])
         tags = pd.DataFrame({'tagID': ids, 'tagValue': values})
     tags.tagID = tags.tagID.transform(int)
-    user_artists = pd.read_csv(d + "user_artists.dat", sep="\t", usecols=['userID', 'artistID', 'weight'])
-    user_friends = pd.read_csv(d + "user_friends.dat", sep="\t", usecols=['userID', 'friendID'])
-    #user_taggedartists = pd.read_csv(d + "user_taggedartists.dat", sep="\t", usecols=['userID', 'artistID', 'tagID', 'day', 'month', 'year'])
+    artists = pickle.load( open( d + "artists.p", "rb" ) )
+    user_artists = pickle.load( open( d + "user_artists.p", "rb" ) )
     user_taggedartists = pickle.load( open( d + "user_taggedartists.p", "rb" ) )
 
-    return artists, tags, user_artists, user_friends, user_taggedartists
+    return artists, tags, user_artists, user_taggedartists
 
 def experiment_lastfm(directory, force_create=False, filename='experiment_df_lastfm.pkl'):
     d = directory
     if d[-1] != "/":
         d += "/"
 
-    artists, tags, user_artists, user_friends, user_taggedartists = read_lastfm(d+"lastfm")
+    artists, tags, user_artists, user_taggedartists = read_lastfm(d+"lastfm")
     if path.exists(d+filename) and force_create == False:
         f = open(d+filename,'rb')
         df = pickle.load(f)

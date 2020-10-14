@@ -51,5 +51,6 @@
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_8"
             importance="1.0" indexword="13" start="s1:tm12-0.2" type="object"/>-->
         <deictic id="d1" type="selftouch" start="s1:tm2" end="s1:tm7" importance="1.0"/>
+        <backchannel id="b2" type="agreement" start="s1:tm2" end="s1:tm11" importance="1.0"/>
     </fml>
 </fml-apml>

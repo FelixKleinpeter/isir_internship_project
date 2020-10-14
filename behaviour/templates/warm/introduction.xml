@@ -46,7 +46,10 @@
             main="im_7" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_7"
             importance="1.0" indexword="8" start="s1:tm11-0.2" type="link"/>-->
-        <performative id="p1" type="rythm" start="s1:tm4" end="s1:tm6" importance="1.0"/>
-        <emotion id="e1" type="small_joy" start="s1:tm1" end="s1:tm7+10" importance="1.0"/>
+        <backchannel id="b1" type="agreement" start="s1:tm2" end="s1:tm6" importance="1.0"/>
+        <deictic id="d1" type="selftouch" start="s1:tm4" end="s1:tm9" importance="1.0"/>
+        <emotion id="e1" type="small_joy" start="s1:tm1" end="s1:tm8+10" importance="1.0"/>
+        <rest id="rp1" type="JointHandsFront" start="s1:tm9" end="1" importance="1.0"/>
+        <backchannel id="b2" type="agreement" start="s1:tm2" end="s1:tm7" importance="1.0"/>
     </fml>
 </fml-apml>

@@ -47,7 +47,7 @@
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm8-0.2" id="id_0" importance="1.0"
+        <!--<ideationalunit end="s1:tm8-0.2" id="id_0" importance="1.0"
             main="im_2" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm7-0.2" id="im_2"
             importance="1.0" indexword="5" previous="true"
@@ -59,6 +59,8 @@
         <imageschema POSroot="noun" end="s1:tm13-0.2" id="im_7"
             importance="1.0" indexword="5" start="s1:tm12-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm14-0.2" id="im_8"
-            importance="1.0" indexword="5" start="s1:tm13-0.2" type="object"/>
+            importance="1.0" indexword="5" start="s1:tm13-0.2" type="object"/>-->
+        <performative id="p1" type="suggest" start="s1:tm8" end="s1:tm12" importance="1.0"/>
+        <backchannel id="b2" type="agreement" start="s1:tm2" end="s1:tm8" importance="1.0"/>
     </fml>
 </fml-apml>

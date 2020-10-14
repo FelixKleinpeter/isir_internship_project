@@ -34,5 +34,6 @@
         <imageschema POSroot="noun" end="s1:tm8-0.2" id="im_4"
             importance="1.0" start="s1:tm7-0.2" type="object"/>-->
         <beat id="b1" type="left" start="s1:tm4" end="s1:tm6" importance="1.0"/>
+        <performative id="p1" type="trigger-head_nod" start="s1:tm2" end="s1:tm6" importance="1.0"/>
     </fml>
 </fml-apml>

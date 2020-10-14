@@ -62,5 +62,7 @@
             start="s1:tm11-0.2" type="whole"/>-->
             <deictic id="d1" type="selftouch" start="s1:tm2" end="s1:tm5" importance="1.0"/>
             <performative id="p1" type="rythm" start="s1:tm6" end="s1:tm12" importance="1.0"/>
+            <rest id="rp1" type="restpose" start="s1:tm12" end="1" importance="1.0"/>
+            <backchannel id="b1" type="agreement" start="s1:tm2" end="s1:tm6" importance="1.0"/>
     </fml>
 </fml-apml>

@@ -64,7 +64,7 @@ USERNAME
         </speech>
     </bml>
     <fml>
-        <ideationalunit end="s1:tm11-0.2" id="id_0" importance="1.0"
+        <!--<ideationalunit end="s1:tm11-0.2" id="id_0" importance="1.0"
             main="im_6" start="s1:tm0-0.2"/>
         <imageschema POSroot="noun" end="s1:tm11-0.2" id="im_6"
             importance="1.0" indexword="9" previous="true"
@@ -74,7 +74,10 @@ USERNAME
         <imageschema POSroot="noun" end="s1:tm16-0.2" id="im_10"
             importance="1.0" start="s1:tm15-0.2" type="whole"/>
         <imageschema POSroot="noun" end="s1:tm22-0.2" id="im_14"
-            importance="1.0" indexword="10" start="s1:tm20-0.2" type="object"/>
+            importance="1.0" indexword="10" start="s1:tm20-0.2" type="object"/>-->
         <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm15+3" importance="1.0"/>
+        <deictic id="d1" type="selftouch" start="s1:tm0" end="s1:tm6" importance="1.0"/>
+        <beat id="b1" type="right" start="s1:tm8" end="s1:tm14" importance="1.0"/>
+        <backchannel id="b2" type="agreement" start="s1:tm5" end="s1:tm12" importance="1.0"/>
     </fml>
 </fml-apml>

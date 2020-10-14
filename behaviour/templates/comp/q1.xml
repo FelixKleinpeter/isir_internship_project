@@ -50,6 +50,7 @@
             importance="1.0" previous="true" start="s1:tm3-0.2" type="in"/>
         <imageschema POSroot="noun" end="s1:tm12-0.2" id="im_4"
             importance="1.0" start="s1:tm11-0.2" type="object"/>-->
-        <beat id="b1" type="left" start="s1:tm8" end="s1:tm11" importance="1.0"/>
+        <deictic id="d1" type="selftouch" start="s1:tm2" end="s1:tm7" importance="1.0"/>
+        <performative id="p1" type="trigger-head_nod" start="s1:tm2" end="s1:tm7" importance="1.0"/>
     </fml>
 </fml-apml>
