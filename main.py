@@ -38,7 +38,7 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "WARM" # "WARM" or "COMP"
+    behaviour = "COMP" # "WARM" or "COMP"
     networking = True
 
     # Loading or computing the first variables / variables tree
@@ -251,7 +251,7 @@ if __name__ == "__main__":
 
         # Change the state allow to write on the read only window
         messages.configure(state='normal')
-        messages.insert(tk.INSERT, '> %s\n' % input)
+        messages.insert(tk.END, '> %s\n' % input)
         messages.tag_add("start", "insert - 1l", "insert")
         messages.tag_config("start", background="white", foreground="gray44")
         messages.configure(state='disabled')

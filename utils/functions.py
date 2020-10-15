@@ -1,6 +1,6 @@
 #coding:utf-8
 import os, shutil
-from tkinter import *
+import tkinter as tk
 import pickle
 
 from utils.generator.xml_file import xml_from_question
@@ -22,7 +22,7 @@ def display(sentence, filename, networking, behaviour, messages, question = -1, 
     print(sentence)
     # Change the state allow to write on the read only window
     messages.configure(state='normal')
-    messages.insert(INSERT, '\n%s\n' % sentence)
+    messages.insert(tk.END, '\n%s\n' % sentence)
     messages.configure(state='disabled')
     messages.see("end")
     if networking:
