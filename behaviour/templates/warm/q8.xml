@@ -3,26 +3,52 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>And
-            <tm id="tm1"/>about
-            <tm id="tm2"/>
+            <tm id="tm0"/>I
+            <tm id="tm1"/>think
+            <tm id="tm2"/>I'm
+            <tm id="tm3"/>close
+            <tm id="tm4"/>to
+            <tm id="tm5"/>find
+            <tm id="tm6"/>new
+            <tm id="tm7"/>artists
+            <tm id="tm8"/>for
+            <tm id="tm9"/>you!
+            <tm id="tm10"/>Tell
+            <tm id="tm11"/>me,
+            <tm id="tm12"/>
+USERNAME
+            ,
+            <tm id="tm13"/>do
+            <tm id="tm14"/>you
+            <tm id="tm15"/>like
+            <tm id="tm16"/>
 *
-            <tm id="tm3"/>music
-            <tm id="tm4"/>then?
-            <tm id="tm4"/>
+            <tm id="tm17"/>music?
+            <tm id="tm17"/>
             <pitchaccent end="s1:tm2" id="xpa0" importance="1"
                 level="strong" start="s1:tm1" type="Hstar"/>
+            <pitchaccent end="s1:tm8" id="xpa1" importance="1"
+                level="strong" start="s1:tm6" type="Hstar"/>
+            <pitchaccent end="s1:tm17" id="xpa2" importance="1"
+                level="strong" start="s1:tm16" type="Hstar"/>
         </speech>
     </bml>
     <fml>
-        <!--<ideationalunit end="s1:tm5-0.2" id="id_0" importance="1.0"
-            main="im_3" start="s1:tm0-0.2"/>
-        <imageschema POSroot="noun" end="s1:tm4-0.2" id="im_3"
-            importance="1.0" indexword="5" start="s1:tm3-0.2" type="object"/>
-        <imageschema POSroot="noun" end="s1:tm5-0.2" id="im_4"
-            importance="1.0" indexword="5" start="s1:tm4-0.2" type="object"/>-->
-        <emotion id="e1" type="small_joy" start="s1:tm0" end="s1:tm4+10" importance="1.0"/>
-        <performative id="p2" type="beatsocial" start="s1:tm0" end="s1:tm3" importance="1.0"/>
-        <performative id="p1" type="trigger-head_nod" start="s1:tm1" end="s1:tm4" importance="1.0"/>
+        <!--<ideationalunit end="s1:tm11-0.2" id="id_0" importance="1.0"
+            main="im_6" start="s1:tm0-0.2"/>
+        <imageschema POSroot="noun" end="s1:tm11-0.2" id="im_6"
+            importance="1.0" indexword="9" previous="true"
+            start="s1:tm7-0.2" type="whole"/>
+        <ideationalunit end="s1:tm10-0.2" id="id_1" importance="1.0"
+            main="im_10" start="s1:tm0-0.2"/>
+        <imageschema POSroot="noun" end="s1:tm16-0.2" id="im_10"
+            importance="1.0" start="s1:tm15-0.2" type="whole"/>
+        <imageschema POSroot="noun" end="s1:tm22-0.2" id="im_14"
+            importance="1.0" indexword="10" start="s1:tm20-0.2" type="object"/>-->
+        <emotion id="e1" type="small_joy" start="s1:tm13" end="s1:tm15+3" importance="1.0"/>
+        <emotion id="e2" type="joyStrong" start="s1:tm0" end="s1:tm13" importance="1.0"/>
+        <deictic id="d1" type="selftouch" start="s1:tm0" end="s1:tm6" importance="1.0"/>
+        <beat id="b1" type="right" start="s1:tm8" end="s1:tm14" importance="1.0"/>
+        <backchannel id="b2" type="agreement" start="s1:tm5" end="s1:tm12" importance="1.0"/>
     </fml>
 </fml-apml>

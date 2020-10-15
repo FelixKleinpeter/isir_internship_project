@@ -44,7 +44,8 @@ def xml_from_question(question, filename, behaviour):
 
     if behaviour == "WARM":
         output_string += """
-            <emotion id="e1" type="joyStrong" start="s1:tm1" end="s1:tm5" importance="1.0"/>
+            <emotion id="e1" type="joyStrong" start="s1:tm0" end="s1:tm4" importance="1.0"/>
+            <emotion id="e2" type="small_joy" start="s1:tm4" end="s1:tm5+30" importance="1.0"/>
         """
     for i in range(len(segments) - 1):
         output_string += sentence_from_pool(pool, str(i+1), "tm"+str(segments[i]), "tm"+str(segments[i+1]))

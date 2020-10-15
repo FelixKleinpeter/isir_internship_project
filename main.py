@@ -170,8 +170,9 @@ if __name__ == "__main__":
         hourglass.pack_forget()
 
         # First end condition : there is no more item in the database, the remaning from the previous questions are recommended
-        if experiment_data["item"].size <= 3 or experiment_data.item.unique().size <= 10 or len(get_X(experiment_data).columns) <= 1:
-            user_preferences = experiment_data
+        if experiment_data["item"].size <= 3 or experiment_data.item.unique().size <= 12 or len(get_X(experiment_data).columns) <= 1 or question_amount > 11:
+            if experiment_data.item.unique().size > 2:
+                user_preferences = experiment_data
             finish = True
         else:
             display(question, "question_about_" + str(tags[tags.tagID == v].tagValue.iloc[0]) + ".xml", networking, behaviour, messages, question_amount, str(tags[tags.tagID == v].tagValue.iloc[0]), username)

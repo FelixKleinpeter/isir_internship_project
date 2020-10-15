@@ -3,13 +3,10 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>Do
-            <tm id="tm1"/>you
-            <tm id="tm2"/>like
-            <tm id="tm3"/>
+            <tm id="tm0"/>
 *
-            <tm id="tm4"/>music?
-            <tm id="tm4"/>
+            <tm id="tm1"/>music?
+            <tm id="tm1"/>
             <pitchaccent end="s1:tm4" id="xpa0" importance="1"
                 level="strong" start="s1:tm3" type="Hstar"/>
         </speech>
@@ -21,7 +18,7 @@
             importance="1.0" indexword="5" start="s1:tm3-0.2" type="object"/>
         <imageschema POSroot="noun" end="s1:tm5-0.2" id="im_4"
             importance="1.0" indexword="5" start="s1:tm4-0.2" type="object"/>-->
-        <performative id="p2" type="beatsocial" start="s1:tm0" end="s1:tm3" importance="1.0"/>
-        <performative id="p1" type="trigger-head_nod" start="s1:tm1" end="s1:tm4" importance="1.0"/>
+        <performative id="p2" type="beatsocial" start="s1:tm0" end="s1:tm1" importance="1.0"/>
+        <performative id="p1" type="trigger-head_nod" start="s1:tm0" end="s1:tm1" importance="1.0"/>
     </fml>
 </fml-apml>

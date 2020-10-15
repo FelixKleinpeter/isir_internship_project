@@ -43,8 +43,8 @@ TODO List :
 - Gather results
 - Fix start with competence mode
 
-- Clean bad unicode in artists names
 - Randomize last parts
+- Move 'we are close to' at the end (question 8)
 
 - Internship report :
 - Graphs :
