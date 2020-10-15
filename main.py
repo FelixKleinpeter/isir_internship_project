@@ -6,6 +6,7 @@ import time
 import tkinter as tk
 import tkinter.font as tkFont
 from PIL import ImageTk, Image
+import unicodedata
 
 from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
@@ -20,7 +21,9 @@ from behaviour.behaviour import behaviour_lastfm, introduction_lastfm
 from recommendation.recommender import random_forest, choose_randomly
 from recommendation.functions import get_X, get_y, data_without_v
 
-
+def remove_accents(input_str):
+    nfkd_form = unicodedata.normalize('NFKD', input_str)
+    return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
 
 if __name__ == "__main__":
@@ -28,12 +31,14 @@ if __name__ == "__main__":
     # Loading or computing the process dataframe
     FORCE_CREATE = False
     df, tags, artists = experiment_lastfm("recommendation/data",force_create=FORCE_CREATE)
+    # Drop the double column about female vocalist
+    df = df.drop(49, axis=1)
 
     # Parameters
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "COMP" # "WARM" or "COMP"
+    behaviour = "WARM" # "WARM" or "COMP"
     networking = True
 
     # Loading or computing the first variables / variables tree
@@ -111,7 +116,7 @@ if __name__ == "__main__":
                 button_dict[b].pack(side = "left")
 
             if behaviour == "WARM" :
-                username = input
+                username = remove_accents(input)
 
             # Creating question depending on the selected behaviour
             questions = behaviour_lastfm(behaviour, username)

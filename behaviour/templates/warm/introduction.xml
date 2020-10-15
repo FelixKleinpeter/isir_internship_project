@@ -32,7 +32,6 @@
         <deictic id="d1" type="selftouch" start="s1:tm4" end="s1:tm9" importance="1.0"/>
         <emotion id="e1" type="joyStrong" start="s1:tm0" end="s1:tm7" importance="1.0"/>
         <emotion id="e2" type="small_joy" start="s1:tm7" end="s1:tm8+10" importance="1.0"/>
-        <backchannel id="b2" type="agreement" start="s1:tm2" end="s1:tm7" importance="1.0"/>
         <rest id="rp1" type="JointHandsFront" start="s1:tm9" end="1" importance="1.0"/>
     </fml>
 </fml-apml>

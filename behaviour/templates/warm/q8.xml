@@ -3,15 +3,15 @@
     <bml>
         <speech id="s1" language="english" start="0.0" text=""
             type="SAPI4" voice="marytts" xmlns="">
-            <tm id="tm0"/>Do
-            <tm id="tm1"/>you
-            <tm id="tm2"/>like
-            <tm id="tm3"/>
+            <tm id="tm0"/>And
+            <tm id="tm1"/>about
+            <tm id="tm2"/>
 *
-            <tm id="tm4"/>music?
+            <tm id="tm3"/>music
+            <tm id="tm4"/>then?
             <tm id="tm4"/>
-            <pitchaccent end="s1:tm4" id="xpa0" importance="1"
-                level="strong" start="s1:tm3" type="Hstar"/>
+            <pitchaccent end="s1:tm2" id="xpa0" importance="1"
+                level="strong" start="s1:tm1" type="Hstar"/>
         </speech>
     </bml>
     <fml>

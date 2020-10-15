@@ -10,6 +10,7 @@ def behaviour_lastfm(behaviour, username):
         questions.append("Then, maybe you like to listen to * music?")
         questions.append("I think I'm close to find new artists for you! Tell me, "+username+", do you like * music?")
         questions.append("And what about * music?")
+        questions.append("And about * music then?")
     elif behaviour == "COMP":
         questions.append("We are interested in knowing if you often listen to * music.")
         questions.append("Then, do you listen to * music?")
