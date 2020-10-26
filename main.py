@@ -10,7 +10,7 @@ import unicodedata
 
 from utils.input_reader import text_input, audio_input, yes_answers, no_answers, idk_answers
 from utils.file_reader import experiment_lastfm
-from utils.generator.question import question_from_v_musics, question_end_experiment
+from utils.generator.question import question_from_v_musics, question_end_experiment, question_without_body
 from utils.output_displayer import lastfm_output_displayer
 from utils.functions import clean_directory, display, save
 from utils.file_reader import read_lastfm
@@ -38,8 +38,8 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "COMP" # "WARM" or "COMP"
-    networking = True
+    behaviour = "WARM" # "WARM" or "COMP"
+    networking = False
 
     # Loading or computing the first variables / variables tree
     first_variables = first_variable_precomputation(df, randomness)
@@ -92,7 +92,10 @@ if __name__ == "__main__":
     experiment = False
 
     # Ending questions and answers
-    end_questions = question_end_experiment()
+    if networking:
+        end_questions = question_end_experiment()
+    else:
+        end_questions = question_without_body()
     end_answers = []
 
     def process(input):

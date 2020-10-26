@@ -35,38 +35,15 @@ project
 ```
 
 TODO List :
-- Comment code
-- Create body behavior
-  - Add rest pose
-- Catch the end of Greta sentences
-- Fix architecture
-- Gather results
-- Fix start with competence mode
-
-- Randomize last parts
-- Move 'we are close to' at the end (question 8)
-
 - Internship report :
 - Graphs :
-  - LASTFM tag assignment
   - Pre-computed trees
-  - Bad data spreads
-  - Good data spreads
-
-FOR THIS WEEK :
-- Improve competence questions ~
-- Improve the amount of questions (more close to 15)
-- Meaning Miner : add a module to load a file for each sentence
-- Do research and add knowledge on rest pose
-- Refactor the beginning of the report
-- Add references to the recommendation system part
-- Have the software working at home
-- Fix the display of the username and the results
+- Use grammar corrector
+- Justify rest poses choices
+- Results :
+  - Average answers for w&c and all
 
 
-
-
--> restpose
 
 Behaviour :
 - Warm :

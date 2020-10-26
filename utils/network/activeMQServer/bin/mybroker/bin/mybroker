@@ -28,7 +28,7 @@ ACTIVEMQ_BASE=`cd "$ACTIVEMQ_BASE" && pwd`
 #export ACTIVEMQ_OPTS_MEMORY="-Xms256M -Xmx1G"
 #export ACTIVEMQ_OPTS="$ACTIVEMQ_OPTS_MEMORY -Dorg.apache.activemq.UseDedicatedTaskRunner=true -Djava.util.logging.config.file=logging.properties"
 
-export ACTIVEMQ_HOME=C:/Users/Visiteur/Desktop/apache-activemq-5.16.0-bin/apache-activemq-5.16.0
+export ACTIVEMQ_HOME=C:/Users/Visiteur/Desktop/project/utils/network/activeMQServer
 export ACTIVEMQ_BASE=$ACTIVEMQ_BASE
 
 ${ACTIVEMQ_HOME}/bin/activemq "$@"

@@ -1,6 +1,6 @@
 @echo off
-set ACTIVEMQ_HOME="C:/Users/Visiteur/Desktop/apache-activemq-5.16.0-bin/apache-activemq-5.16.0"
-set ACTIVEMQ_BASE="C:/Users/Visiteur/Desktop/apache-activemq-5.16.0-bin/apache-activemq-5.16.0/bin/mybroker"
+set ACTIVEMQ_HOME="C:/Users/Visiteur/Desktop/project/utils/network/activeMQServer"
+set ACTIVEMQ_BASE="C:/Users/Visiteur/Desktop/project/utils/network/activeMQServer/bin/mybroker"
 
 set PARAM=%1
 :getParam
