@@ -976,3 +976,38 @@ Caused by: java.net.BindException: Address already in use: JVM_Bind
 2020-10-22 18:20:20,934 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57336-1603361149997-0:1) uptime 5 hours 14 minutes | org.apache.activemq.broker.BrokerService | Thread-28
 2020-10-22 18:20:20,950 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-57336-1603361149997-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-28
 2020-10-22 18:20:20,950 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Thu Oct 22 13:05:47 EEST 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-28
+2020-10-27 16:02:35,162 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Tue Oct 27 16:02:35 EET 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2020-10-27 16:02:36,517 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\Visiteur\Desktop\project\utils\network\activeMQServer\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2020-10-27 16:02:36,747 | INFO  | KahaDB is version 7 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2020-10-27 16:02:36,895 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\project\utils\network\activeMQServer\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2020-10-27 16:02:37,080 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-58974-1603807356910-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2020-10-27 16:02:37,233 | INFO  | Listening for connections at: tcp://VIB-PC:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-10-27 16:02:37,233 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2020-10-27 16:02:37,249 | INFO  | Listening for connections at: amqp://VIB-PC:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-10-27 16:02:37,249 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2020-10-27 16:02:37,249 | INFO  | Listening for connections at: stomp://VIB-PC:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-10-27 16:02:37,265 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2020-10-27 16:02:37,278 | INFO  | Listening for connections at: mqtt://VIB-PC:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2020-10-27 16:02:37,278 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2020-10-27 16:02:37,309 | INFO  | Starting Jetty server | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-10-27 16:02:37,480 | INFO  | Creating Jetty connector | org.apache.activemq.transport.WebTransportServerSupport | main
+2020-10-27 16:02:37,734 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@497486b3{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2020-10-27 16:02:37,834 | INFO  | Listening for connections at ws://VIB-PC:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2020-10-27 16:02:37,834 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2020-10-27 16:02:37,834 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-58974-1603807356910-0:1) started | org.apache.activemq.broker.BrokerService | main
+2020-10-27 16:02:37,834 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2020-10-27 16:02:39,280 | INFO  | ActiveMQ WebConsole available at http://127.0.0.1:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-10-27 16:02:39,280 | INFO  | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2020-10-27 16:04:40,863 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-58974-1603807356910-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,863 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,863 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,879 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,879 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,926 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,941 | INFO  | PListStore:[C:\Users\Visiteur\Desktop\project\utils\network\activeMQServer\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,941 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,941 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-10-27 16:04:40,948 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2020-10-27 16:04:41,029 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-58974-1603807356910-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-10-27 16:04:41,029 | INFO  | Apache ActiveMQ 5.16.0 (localhost, ID:VIB-PC-58974-1603807356910-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2020-10-27 16:04:41,029 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@21213b92: startup date [Tue Oct 27 16:02:35 EET 2020]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook

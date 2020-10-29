@@ -38,7 +38,7 @@ if __name__ == "__main__":
     randomness = 0.7
     input_function = text_input
     question_function = question_from_v_musics
-    behaviour = "WARM" # "WARM" or "COMP"
+    behaviour = "COMP" # "WARM" or "COMP"
     networking = False
 
     # Loading or computing the first variables / variables tree
@@ -226,12 +226,12 @@ if __name__ == "__main__":
             time.sleep(3)
             window.destroy()
         else:
-            if len(end_questions) < 15 and intro:
+            if len(end_questions) < 8 + int(networking) * 7 and intro:
                 for b in ending_buttons:
                     button_dict[b].pack_forget()
                 for b in start_buttons:
                     button_dict[b].pack(side = "left")
-            if len(end_questions) < 14 and intro:
+            if len(end_questions) < 7 + int(networking) * 7 and intro:
                 experiment = True
                 display(introduction, "introduction.xml", networking, behaviour, messages, variable = "introduction")
 
@@ -241,8 +241,9 @@ if __name__ == "__main__":
                         button_dict[b].pack_forget()
                     input_field.pack(side=tk.BOTTOM, fill=tk.X)
                     start_button_on = False
-                    send_to_greta("behaviour/templates/hands_front.xml")
-                else:
+                    if networking:
+                        send_to_greta("behaviour/templates/hands_front.xml")
+                elif networking:
                     send_to_greta("behaviour/templates/Restpose.xml")
             else:
                 question = end_questions[0]
